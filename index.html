@@ -43,12 +43,17 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <!-- Container wrapper -->
       <div class="container-fluid px-5">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
-          <img src="img/logo.svg" height="35" alt="TS Logo" class="logo-img" />
+        <a class="navbar-brand mt-2 mt-lg-0" href="#intro-section">
+          <img
+            src="img/logo.svg"
+            height="35"
+            alt="TS Logo"
+            class="logo-img me-2"
+          /><small>Tarek Saimouah</small>
         </a>
 
         <!-- Toggle button -->
@@ -67,9 +72,9 @@
         <!-- Collapsible wrapper -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left links -->
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#intro-section">intro</a>
+              <a class="nav-link" href="#intro-section">Intro</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills-section">Skills</a>
@@ -98,8 +103,10 @@
           <div class="col-sm-12 col-md-8 col-lg-6">
             <h1>Hi, I am Tarek Saimouah</h1>
             <div class="d-flex justify-content-center">
-              <h2>I am a</h2>
-              <h2 class="ms-3" id="description">Full Stack Js Developer.</h2>
+              <h2 class="description-text">I am a</h2>
+              <h2 class="ms-3 description-text" id="description">
+                Full Stack Js Developer.
+              </h2>
             </div>
             <button
               type="button"
@@ -125,9 +132,7 @@
     <!-- Skills Section -->
     <section id="skills-section">
       <div class="container-fluid text-center section-content skills-section">
-        <h3 class="mb-5" style="color: blueviolet; font-family: cursive">
-          Skills
-        </h3>
+        <h2 class="mb-5">Skills</h2>
         <div class="row">
           <!-- Programming Skills -->
           <div class="col-sm-12 col-md-8 col-lg-6 px-3">
@@ -660,10 +665,8 @@
 
     <!-- Projects Section -->
     <section id="projects-section">
-      <div class="container-fluid text-center section-content">
-        <h3 class="mb-5" style="color: blueviolet; font-family: cursive">
-          My Projects
-        </h3>
+      <div class="container-fluid text-center section-content projects-section">
+        <h2 class="mb-5">My Projects</h2>
         <!-- Projects row -->
         <div class="row my-3 justify-content-evenly">
           <!-- Project Movies Galaxy -->
@@ -963,8 +966,377 @@
           </div>
           <!-- /FRT scrollable modal -->
 
-          <!-- Project -->
-          <div class="col-sm-6 col-md-6 col-lg-4">col</div>
+          <!-- Project Remind Me -->
+          <div class="col-sm-6 col-md-6 col-lg-4 px-auto">
+            <div class="card mx-auto">
+              <div
+                class="bg-image hover-overlay ripple card-img-wrapper"
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  style="width: 100%"
+                  src="img/remind-me-logo.png"
+                  class="img-fluid img-thumbnail card-img"
+                />
+
+                <a
+                  data-mdb-toggle="modal"
+                  role="button"
+                  href="#remind-me-modal"
+                >
+                  <!-- Mask -->
+                  <div
+                    class="mask"
+                    style="
+                      background: linear-gradient(
+                        to bottom,
+                        hsla(0, 0%, 0%, 0),
+                        hsla(263, 80%, 20%, 0.5)
+                      );
+                    "
+                  >
+                    <div
+                      class="bottom-0 d-flex align-items-end h-100 text-center justify-content-center"
+                    >
+                      <div>
+                        <h5 class="fw-bold text-white mb-4">Remind Me</h5>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Remind Me</h5>
+                <h6 class="card-subtitle mb-2 technology">
+                  <span class="mx-2">Android</span>
+                  <span class="mx-2">Kotlin</span
+                  ><span class="mx-2">Kotlin Coroutines</span
+                  ><span class="mx-2">Room</span>
+                </h6>
+                <hr style="width: 80%" class="mx-auto" />
+                <p class="card-text">
+                  Android app to make elegant reminders with amazing features.
+                </p>
+                <a
+                  class="btn btn-primary"
+                  data-mdb-toggle="modal"
+                  href="#remind-me-modal"
+                  role="button"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Remind Me scrollable modal -->
+          <div id="remind-me-modal" class="modal mx-auto" tabindex="-1">
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Remind Me Details</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-mdb-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-start">
+                  <h6 class="modal-body-title">Technical Information:</h6>
+                  <ul>
+                    <li>
+                      Add reminders with background services using
+                      <span class="technology">Alarm Manager</span> and
+                      <span class="technology">Broadcast Reciver</span>.
+                    </li>
+                    <li>
+                      Optimized performance by using
+                      <span class="technology">kotlin Coroutines</span>
+                      framework for multi-threading and background tasks.
+                    </li>
+                    <li>
+                      Local Database storage
+                      <span class="technology">SQLite</span> implemented using
+                      <span class="technology">Room</span> ORM lib.
+                    </li>
+                    <li>
+                      <span class="technology">Notifications</span>,
+                      <span class="technology">Image Picker</span>,
+                      <span class="technology">Audio Recorder & Player</span>
+                      and more.
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    type="button"
+                    class="btn btn-success btn-modal-link"
+                    href="https://apkpure.com/p/com.tarek.remindme"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      style="max-width: 16px"
+                      src="img/apkpure-logo.svg"
+                      alt="Apkpure logo"
+                      class="mb-1 me-1"
+                    />
+                    View on Apkpure
+                  </a>
+                  <a
+                    type="button"
+                    class="btn btn-dark btn-modal-link"
+                    href="https://www.amazon.com/gp/product/B08P8Z6GJB"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-amazon fa-lg me-1 mt-1"></i> View on Amazon
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Remind Me scrollable modal -->
+
+          <!-- Project Encryptor App -->
+          <div class="col-sm-6 col-md-6 col-lg-4 px-auto">
+            <div class="card mx-auto">
+              <div
+                class="bg-image hover-overlay ripple card-img-wrapper"
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  style="width: 100%"
+                  src="img/encryptor-app-logo.png"
+                  class="img-fluid img-thumbnail card-img"
+                />
+
+                <a
+                  data-mdb-toggle="modal"
+                  role="button"
+                  href="#encryptor-app-modal"
+                >
+                  <!-- Mask -->
+                  <div
+                    class="mask"
+                    style="
+                      background: linear-gradient(
+                        to bottom,
+                        hsla(0, 0%, 0%, 0),
+                        hsla(263, 80%, 20%, 0.5)
+                      );
+                    "
+                  >
+                    <div
+                      class="bottom-0 d-flex align-items-end h-100 text-center justify-content-center"
+                    >
+                      <div>
+                        <h5 class="fw-bold text-white mb-4">Encryptor App</h5>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Encryptor App</h5>
+                <h6 class="card-subtitle mb-2 technology">
+                  <span class="mx-2">Android</span>
+                  <span class="mx-2">Java</span
+                  ><span class="mx-2">javax.crypto</span>
+                  <span class="mx-2">AES</span>
+                  <span class="mx-2">3DES</span>
+                </h6>
+                <hr style="width: 80%" class="mx-auto" />
+                <p class="card-text">
+                  Android app for text encryption and decryption.
+                </p>
+                <a
+                  class="btn btn-primary"
+                  data-mdb-toggle="modal"
+                  href="#encryptor-app-modal"
+                  role="button"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Encryptor App scrollable modal -->
+          <div id="encryptor-app-modal" class="modal mx-auto" tabindex="-1">
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Encryptor App Details</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-mdb-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-start">
+                  <h6 class="modal-body-title">Technical Information:</h6>
+                  <ul>
+                    <li>
+                      My first
+                      <span class="technology">Android</span> application
+                      implemented encryption algorithms for my collage project.
+                    </li>
+                    <li>
+                      Text encryption/decryption with
+                      <span class="technology">AES</span>,
+                      <span class="technology">3DES</span>
+                      algorithms.
+                    </li>
+                    <li>
+                      <span class="technology">javax.crypto</span> package for
+                      encryption algorithms.
+                    </li>
+                  </ul>
+                </div>
+                <div class="modal-footer">
+                  <a
+                    type="button"
+                    class="btn btn-success btn-modal-link"
+                    href="https://apkpure.com/p/com.tarek.encryptorapp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      style="max-width: 16px"
+                      src="img/apkpure-logo.svg"
+                      alt="Apkpure logo"
+                      class="mb-1 me-1"
+                    />
+                    View on Apkpure
+                  </a>
+                  <a
+                    type="button"
+                    class="btn btn-dark btn-modal-link"
+                    href="https://www.amazon.com/gp/product/B07QGWS216"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-amazon fa-lg me-1 mt-1"></i> View on Amazon
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Encryptor App scrollable modal -->
+
+          <!-- Project Meetings Organizer -->
+          <div class="col-sm-6 col-md-6 col-lg-4 px-auto">
+            <div class="card mx-auto">
+              <div
+                class="bg-image hover-overlay ripple card-img-wrapper"
+                data-mdb-ripple-color="light"
+              >
+                <img
+                  style="width: 100%"
+                  src="img/meetings-organizer-logo.png"
+                  class="img-fluid img-thumbnail card-img"
+                />
+
+                <a
+                  data-mdb-toggle="modal"
+                  role="button"
+                  href="#meetings-organizer-modal"
+                >
+                  <!-- Mask -->
+                  <div
+                    class="mask"
+                    style="
+                      background: linear-gradient(
+                        to bottom,
+                        hsla(0, 0%, 0%, 0),
+                        hsla(263, 80%, 20%, 0.5)
+                      );
+                    "
+                  >
+                    <div
+                      class="bottom-0 d-flex align-items-end h-100 text-center justify-content-center"
+                    >
+                      <div>
+                        <h5 class="fw-bold text-white mb-4">
+                          Meetings Organizer
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Meetings Organizer</h5>
+                <h6 class="card-subtitle mb-2 technology">
+                  <span class="mx-2">Android</span>
+                  <span class="mx-2">Java</span
+                  ><span class="mx-2">Firebase</span>
+                  <span class="mx-2">Realtime Database</span>
+                  <span class="mx-2">FCM</span>
+                </h6>
+                <hr style="width: 80%" class="mx-auto" />
+                <p class="card-text">
+                  Android application that provides a social networking service
+                  used to conduct a prior meeting between the meeting manager
+                  and invited staff, with realtime feedback and notifications.
+                </p>
+                <a
+                  class="btn btn-primary"
+                  data-mdb-toggle="modal"
+                  href="#meetings-organizer-modal"
+                  role="button"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Meetings Organizer scrollable modal -->
+          <div
+            id="meetings-organizer-modal"
+            class="modal mx-auto"
+            tabindex="-1"
+          >
+            <div
+              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Meetings Organizer Details</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-mdb-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body text-start">
+                  <h6 class="modal-body-title">Technical Information:</h6>
+                  <ul>
+                    <li>
+                      My collage graduation project as
+                      <span class="technology">Android</span> application.
+                    </li>
+                    <li>
+                      Realtime app using
+                      <span class="technology">Firebase Realtime Database</span
+                      >.
+                    </li>
+                    <li>
+                      Push notifications using
+                      <span class="technology">Firebace FCM</span> service.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /Meetings Organizer scrollable modal -->
         </div>
         <!-- /Projects row -->
       </div>

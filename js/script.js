@@ -19,6 +19,13 @@ const skillsSectionContent =
   document.getElementsByClassName('skills-section')[0];
 animateSectionContentUp(skillsSectionContent);
 
+/*
+// projects content animation in skills section
+const projectsSectionContent =
+  document.getElementsByClassName('projects-section')[0];
+animateSectionContentUp(projectsSectionContent);
+*/
+
 // skills progress-bar animation in skills section
 let target = '.progress-bar';
 setAnimationObserver(target);
