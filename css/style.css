@@ -1,0 +1,499 @@
+:root {
+  --bg-color-primary: #25262e;
+  --bg-color-primary1: #222831;
+
+  --bg-color-secondary: #2c2f37;
+  --bg-color-secondary1: #393e46;
+
+  --brand-primary: #00adb5;
+  --brand-secondary: #eeeeee;
+}
+
+body {
+  color: var(--mdb-light);
+}
+
+/* Navbar */
+
+.logo-img {
+  border-radius: 6px;
+  padding: 1px;
+}
+
+/* Intro Section */
+
+#intro-section {
+  background-color: var(--bg-color-primary);
+  padding-top: 4%;
+}
+
+.section-content {
+  min-height: 100vh;
+  padding-top: 4%;
+  padding-bottom: 6%;
+}
+
+#description {
+  color: blueviolet;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.photo {
+  max-width: 16vw;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 576px) {
+  h1,
+  #intro-section {
+    font-size: 1.2rem;
+  }
+  h2,
+  #intro-section {
+    font-size: 0.8rem;
+  }
+
+  #intro.section,
+  .photo {
+    max-width: 50vw;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  h1,
+  #intro-section {
+    font-size: 2rem;
+  }
+  h2,
+  #intro-section {
+    font-size: 1.5rem;
+  }
+
+  #intro.section,
+  .photo {
+    max-width: 30vw;
+  }
+}
+
+/* Intro Section */
+
+/* Skills Section */
+
+#skills-section {
+  background-color: var(--bg-color-secondary);
+}
+
+.progress-bar {
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0px 6px 6px 0px;
+  color: #222831;
+}
+
+/* JS progress */
+#progress-js {
+  width: 85%;
+  background-color: #f0db4f;
+}
+
+.progress-animation-js {
+  animation: 0.8s anim-fill-js ease-out;
+}
+@keyframes anim-fill-js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+/* Kotlin progress */
+#progress-kotlin {
+  width: 75%;
+  background-color: coral;
+}
+.progress-animation-kotlin {
+  animation: 0.8s anim-fill-kotlin ease-out;
+}
+@keyframes anim-fill-kotlin {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+/* Java progress */
+#progress-java {
+  width: 90%;
+}
+
+.progress-animation-java {
+  animation: 0.8s anim-fill-java ease-out;
+}
+@keyframes anim-fill-java {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+/* Python progress */
+#progress-py {
+  width: 75%;
+}
+
+.progress-animation-py {
+  animation: 0.8s anim-fill-py ease-out;
+}
+@keyframes anim-fill-py {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+/* SQL progress */
+#progress-sql {
+  width: 80%;
+  background-color: tomato;
+}
+
+.progress-animation-sql {
+  animation: 0.8s anim-fill-sql ease-out;
+}
+@keyframes anim-fill-sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* NoSQL progress */
+#progress-nosql {
+  width: 85%;
+  background-color: seagreen;
+}
+
+.progress-animation-nosql {
+  animation: 0.8s anim-fill-nosql ease-out;
+}
+@keyframes anim-fill-nosql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+/* CPP progress */
+#progress-cpp {
+  width: 70%;
+}
+
+.progress-animation-cpp {
+  animation: 0.8s anim-fill-cpp ease-out;
+}
+@keyframes anim-fill-cpp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+/* HTML5 progress */
+#progress-html {
+  width: 75%;
+  background-color: #e34f26;
+}
+
+.progress-animation-html {
+  animation: 0.8s anim-fill-html ease-out;
+}
+@keyframes anim-fill-html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+/* CSS3 progress */
+#progress-css {
+  width: 70%;
+}
+
+.progress-animation-css {
+  animation: 0.8s anim-fill-css ease-out;
+}
+@keyframes anim-fill-css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+/* Terminal progress */
+#progress-terminal {
+  width: 85%;
+}
+
+.progress-animation-terminal {
+  animation: 0.8s anim-fill-terminal ease-out;
+}
+@keyframes anim-fill-terminal {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+/* Node Js progress */
+#progress-node {
+  width: 80%;
+  background-color: #68a063;
+}
+
+.progress-animation-node {
+  animation: 0.8s anim-fill-node ease-out;
+}
+@keyframes anim-fill-node {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* React Js progress */
+#progress-react {
+  width: 80%;
+}
+
+.progress-animation-react {
+  animation: 0.8s anim-fill-react ease-out;
+}
+@keyframes anim-fill-react {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* Bootstrap progress */
+#progress-bootstrap {
+  width: 85%;
+  background-color: #563d7c;
+}
+
+.progress-animation-bootstrap {
+  animation: 0.8s anim-fill-bootstrap ease-out;
+}
+@keyframes anim-fill-bootstrap {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+/* Android progress */
+#progress-android {
+  width: 90%;
+  background-color: #a4c639;
+}
+
+.progress-animation-android {
+  animation: 0.8s anim-fill-android ease-out;
+}
+@keyframes anim-fill-android {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+/* Git progress */
+#progress-git {
+  width: 80%;
+  background-color: #f34f29;
+}
+
+.progress-animation-git {
+  animation: 0.8s anim-fill-git ease-out;
+}
+@keyframes anim-fill-git {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+/* Linux progress */
+#progress-linux {
+  width: 80%;
+}
+
+.progress-animation-linux {
+  animation: 0.8s anim-fill-linux ease-out;
+}
+@keyframes anim-fill-linux {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .progress-bar {
+    font-size: 0.6rem;
+  }
+
+  .progress {
+    height: 10px;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Skills Section */
+
+/* Global animations */
+
+/* lineup class and keyframes */
+.line-up {
+  animation: 2s anim-line-up ease-out;
+}
+@keyframes anim-line-up {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* Projects Section */
+
+#projects-section {
+  background-color: var(--bg-color-primary);
+}
+
+.card {
+  color: var(--bg-color-primary);
+  max-width: 60%;
+  max-height: 80%;
+}
+
+.technology {
+  color: deeppink;
+}
+
+.card-img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: var(--bg-color-secondary);
+}
+
+.card-img-wrapper {
+  min-height: 200px;
+}
+
+.modal {
+  color: #222831;
+}
+
+@media screen and (max-width: 576px) {
+  h1,
+  #projects-section {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    max-width: 80%;
+    max-height: fit-content;
+    margin: 8% 10%;
+  }
+
+  .card-img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .card-img-wrapper {
+    min-height: 100px;
+    max-height: 200px;
+  }
+  .bg-image {
+    min-width: none;
+  }
+
+  .modal {
+    max-width: 100%;
+    max-height: 80%;
+  }
+
+  .btn-modal-link {
+    max-width: 50%;
+  }
+
+  .modal-footer {
+    margin: 0 auto;
+  }
+
+  .modal-title {
+    font-size: 1.2rem;
+  }
+  .modal-body-title {
+    font-size: 1.2rem;
+  }
+
+  .modal > ul,
+  li {
+    font-size: 1rem;
+  }
+}
+
+/* Projects Section */
+
+/* Global animations */
