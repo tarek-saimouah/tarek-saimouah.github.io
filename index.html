@@ -110,7 +110,7 @@
             </div>
             <button
               type="button"
-              class="btn btn-secondary btn-rounded btn-lg btn-md-md my-3"
+              class="btn btn-secondary btn-rounded btn-lg my-3"
             >
               Contact Me
             </button>
@@ -135,11 +135,12 @@
         <h2 class="mb-5">Skills</h2>
         <div class="row">
           <!-- Programming Skills -->
-          <div class="col-sm-12 col-md-8 col-lg-6 px-3">
-            <h4 class="my-3">
+          <div class="col-sm-12 col-md-6 col-lg-6 px-3">
+            <h4 class="my-3 skill-description">
               <i class="fas fa-code fa-md me-2"></i>
               Programming
             </h4>
+
             <!-- Skill -->
             <div class="row">
               <!-- Skill Text -->
@@ -178,42 +179,6 @@
               <!-- Skill Text -->
               <div class="col-sm-2 col-md-2 col-lg-2">
                 <h6 class="mt-2">
-                  <span
-                    ><img
-                      style="width: 15%"
-                      src="img/kotlin.svg"
-                      alt="kotlin logo"
-                      class="mb-1 me-1"
-                  /></span>
-                  Kotlin
-                </h6>
-              </div>
-
-              <!-- Skill Progress -->
-              <div class="col-sm-10 col-md-10 col-lg-10">
-                <div
-                  class="progress active mt-3 flex-fill"
-                  style="height: 15px"
-                >
-                  <div
-                    id="progress-kotlin"
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    75%
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Skill -->
-            <div class="row">
-              <!-- Skill Text -->
-              <div class="col-sm-2 col-md-2 col-lg-2">
-                <h6 class="mt-2">
                   <i
                     style="color: deepskyblue"
                     class="fab fa-java fa-lg me-2"
@@ -237,6 +202,42 @@
                     aria-valuemax="100"
                   >
                     90%
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Skill -->
+            <div class="row">
+              <!-- Skill Text -->
+              <div class="col-sm-2 col-md-2 col-lg-2">
+                <h6 class="mt-2">
+                  <span
+                    ><img
+                      style="width: 15%"
+                      src="img/kotlin.svg"
+                      alt="kotlin logo"
+                      class="mb-1 me-1 skill-logo"
+                  /></span>
+                  Kotlin
+                </h6>
+              </div>
+
+              <!-- Skill Progress -->
+              <div class="col-sm-10 col-md-10 col-lg-10">
+                <div
+                  class="progress active mt-3 flex-fill"
+                  style="height: 15px"
+                >
+                  <div
+                    id="progress-kotlin"
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    75%
                   </div>
                 </div>
               </div>
@@ -342,7 +343,7 @@
                     ><img
                       style="width: 32px"
                       src="img/cpp.png"
-                      alt="kotlin logo"
+                      alt="cpp logo"
                       class="me-1"
                   /></span>
                   C++
@@ -461,8 +462,8 @@
           <!-- /Programming Skills -->
 
           <!-- Frameworks Skills -->
-          <div class="col-sm-12 col-md-4 col-lg-6 px-3">
-            <h4 class="my-3">
+          <div class="col-sm-12 col-md-6 col-lg-6 px-3">
+            <h4 class="my-3 skill-description">
               <i class="fas fa-desktop fa-md me-2"></i>
               Frameworks
             </h4>
@@ -530,6 +531,7 @@
               </div>
             </div>
 
+            <!-- Skill -->
             <div class="row">
               <!-- Skill Text -->
               <div class="col-sm-2 col-md-2 col-lg-2">
@@ -665,12 +667,12 @@
 
     <!-- Projects Section -->
     <section id="projects-section">
-      <div class="container-fluid text-center section-content projects-section">
+      <div class="container text-center section-content projects-section">
         <h2 class="mb-5">My Projects</h2>
         <!-- Projects row -->
-        <div class="row my-3 justify-content-evenly">
+        <div class="row my-3">
           <!-- Project Movies Galaxy -->
-          <div class="col-sm-6 col-md-6 col-lg-4 px-auto">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-5">
             <div class="card mx-auto">
               <div
                 class="bg-image hover-overlay ripple card-img-wrapper"
@@ -718,9 +720,8 @@
                 </h6>
                 <hr style="width: 80%" class="mx-auto" />
                 <p class="card-text">
-                  Android app to find new and trending Movies & TV Shows and
-                  search & filter searching and get detailed information and
-                  make your own favourite list of it.
+                  Android app to find new and trending Movies & TV Shows and get
+                  detailed information and make favourite list of it.
                 </p>
                 <a
                   class="btn btn-primary"
@@ -808,8 +809,13 @@
           </div>
           <!-- /Movies Galaxy scrollable modal -->
 
+          <hr
+            class="d-block d-sm-block d-md-none mx-auto"
+            style="max-width: 70%"
+          />
+
           <!-- Project Flamingo Reading Tracker Web -->
-          <div class="col-sm-6 col-md-6 col-lg-4 px-auto">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-5">
             <div class="card mx-auto">
               <div
                 class="bg-image hover-overlay ripple card-img-wrapper"
@@ -847,10 +853,10 @@
               <div class="card-body">
                 <h5 class="card-title">Flamingo Reading Tracker Web</h5>
                 <h6 class="card-subtitle mb-2 technology">
+                  <span class="mx-2">MongoDB</span>
+                  <span class="mx-2">Express</span>
                   <span class="mx-2">React JS</span>
                   <span class="mx-2">Node JS</span>
-                  <span class="mx-2">Express</span>
-                  <span class="mx-2">Mongo DB</span>
                   <span class="mx-2">JavaScript</span
                   ><span class="mx-2">Bootstrap 5</span>
                 </h6>
@@ -966,8 +972,13 @@
           </div>
           <!-- /FRT scrollable modal -->
 
+          <hr
+            class="d-block d-sm-block d-md-none mx-auto"
+            style="max-width: 70%"
+          />
+
           <!-- Project Remind Me -->
-          <div class="col-sm-6 col-md-6 col-lg-4 px-auto">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-5">
             <div class="card mx-auto">
               <div
                 class="bg-image hover-overlay ripple card-img-wrapper"
@@ -1010,7 +1021,7 @@
                 <h6 class="card-subtitle mb-2 technology">
                   <span class="mx-2">Android</span>
                   <span class="mx-2">Kotlin</span
-                  ><span class="mx-2">Kotlin Coroutines</span
+                  ><span class="mx-2">Coroutines</span
                   ><span class="mx-2">Room</span>
                 </h6>
                 <hr style="width: 80%" class="mx-auto" />
@@ -1100,8 +1111,13 @@
           </div>
           <!-- /Remind Me scrollable modal -->
 
+          <hr
+            class="d-block d-sm-block d-md-none mx-auto"
+            style="max-width: 70%"
+          />
+
           <!-- Project Encryptor App -->
-          <div class="col-sm-6 col-md-6 col-lg-4 px-auto">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-5">
             <div class="card mx-auto">
               <div
                 class="bg-image hover-overlay ripple card-img-wrapper"
@@ -1229,8 +1245,13 @@
           </div>
           <!-- /Encryptor App scrollable modal -->
 
+          <hr
+            class="d-block d-sm-block d-md-none mx-auto"
+            style="max-width: 70%"
+          />
+
           <!-- Project Meetings Organizer -->
-          <div class="col-sm-6 col-md-6 col-lg-4 px-auto">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-5">
             <div class="card mx-auto">
               <div
                 class="bg-image hover-overlay ripple card-img-wrapper"
@@ -1281,9 +1302,9 @@
                 </h6>
                 <hr style="width: 80%" class="mx-auto" />
                 <p class="card-text">
-                  Android application that provides a social networking service
-                  used to conduct a prior meeting between the meeting manager
-                  and invited staff, with realtime feedback and notifications.
+                  Android application used to conduct a prior meeting between
+                  the meeting manager and invited staff, with realtime feedback
+                  and notifications.
                 </p>
                 <a
                   class="btn btn-primary"

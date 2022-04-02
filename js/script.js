@@ -8,7 +8,7 @@ import { setAnimationObserver } from './scripts/observer.js';
 const description = document.getElementById('description');
 const descriptionTexts = [
   'Full Stack JS Developer.',
-  'Android Native Developer',
+  'Android Developer',
   'Software Engineer',
 ];
 

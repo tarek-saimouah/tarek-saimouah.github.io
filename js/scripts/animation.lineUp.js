@@ -33,6 +33,6 @@ export const animateSectionContentUp = (section) => {
     sectionContent.classList.add('line-up');
     setTimeout(() => {
       sectionContent.classList.remove('line-up');
-    }, 2500);
+    }, 2000);
   }
 };
