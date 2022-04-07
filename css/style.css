@@ -99,6 +99,10 @@ body {
   opacity: 0.8;
 }
 
+.progress {
+  height: 8px;
+}
+
 .progress-bar {
   font-size: 1rem;
   font-weight: bold;
