@@ -13,6 +13,31 @@ body {
   color: var(--mdb-light);
 }
 
+/* Global Style */
+
+.section-content {
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
+.contacts {
+  list-style: none;
+  justify-content: space-around;
+  max-width: 80%;
+}
+
+.contact-link {
+  color: var(--mdb-light);
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.contact-link:hover {
+  color: grey;
+}
+
+/* /Global Style */
+
 /* Navbar */
 
 #navbar {
@@ -30,11 +55,6 @@ body {
 #intro-section {
   background-color: var(--bg-color-primary);
   padding-top: 4%;
-}
-
-.section-content {
-  padding-top: 6%;
-  padding-bottom: 6%;
 }
 
 #description {
