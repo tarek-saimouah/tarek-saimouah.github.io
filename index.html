@@ -43,7 +43,10 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+    >
       <!-- Container wrapper -->
       <div class="container-fluid px-5">
         <!-- Navbar brand -->
@@ -75,6 +78,9 @@
           <ul class="navbar-nav ms-5 mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="#intro-section">Intro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#skills-section">Skills</a>
@@ -128,6 +134,57 @@
       </div>
     </section>
     <!-- /Intro Section -->
+
+    <!-- About Section -->
+    <section id="about-section">
+      <div class="container section-content about-section">
+        <div class="row">
+          <!-- About Text -->
+          <h3 class="about-title mb-4">About me</h3>
+          <div class="col-12">
+            <h5>Hello, my name is Tarek Saimouah</h5>
+            <p class="lead">
+              I am a software engineer, full-stack js developer
+              <strong>(mern stack)</strong>. <br />Android native developer
+              <strong>(Kotlin, Java)</strong>. <br />I like to engage in many
+              software development stages like <strong>backend</strong>,
+              <strong>frontend</strong>, <strong>mobile</strong>,
+              <strong>testing</strong> and more.
+            </p>
+            <p class="lead mt-2">
+              Let me know if i can be a part of your next project.
+            </p>
+            <button
+              type="button"
+              class="btn btn-secondary btn-rounded btn-lg my-2"
+            >
+              Contact Me
+            </button>
+          </div>
+
+          <!-- Intro Image -->
+          <div class="col-12 mt-5">
+            <h3 class="about-title my-4 mt-5">Education</h3>
+            <div class="d-flex education">
+              <h4 class="my-2">
+                <i class="fas fa-graduation-cap fa-lg me-3"></i>
+                Bachelor Degree
+              </h4>
+              <div class="vl mx-5 text-center"></div>
+              <h4 class="ms-3 my-2">
+                Tishreen University
+                <span class="ms-2 text-muted">2020</span>
+              </h4>
+              <div class="vl mx-5 text-center"></div>
+              <h5 class="ms-3 my-2">
+                Computers and Automatic Control Engineering
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /About Section -->
 
     <!-- Skills Section -->
     <section id="skills-section">
@@ -724,11 +781,11 @@
                   detailed information and make favourite list of it.
                 </p>
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-danger d-block mx-5"
                   data-mdb-toggle="modal"
                   href="#movies-galaxy-modal"
                   role="button"
-                  >Details</a
+                  ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
                 >
               </div>
             </div>
@@ -866,11 +923,11 @@
                   detailed information and make your own favourite lists.
                 </p>
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-danger d-block mx-5"
                   data-mdb-toggle="modal"
-                  href="#frt-web-modal"
+                  href="#movies-galaxy-modal"
                   role="button"
-                  >Details</a
+                  ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
                 >
               </div>
             </div>
@@ -1029,11 +1086,11 @@
                   Android app to make elegant reminders with amazing features.
                 </p>
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-danger d-block mx-5"
                   data-mdb-toggle="modal"
-                  href="#remind-me-modal"
+                  href="#movies-galaxy-modal"
                   role="button"
-                  >Details</a
+                  ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
                 >
               </div>
             </div>
@@ -1169,11 +1226,11 @@
                   Android app for text encryption and decryption.
                 </p>
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-danger d-block mx-5"
                   data-mdb-toggle="modal"
-                  href="#encryptor-app-modal"
+                  href="#movies-galaxy-modal"
                   role="button"
-                  >Details</a
+                  ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
                 >
               </div>
             </div>
@@ -1307,11 +1364,11 @@
                   and notifications.
                 </p>
                 <a
-                  class="btn btn-primary"
+                  class="btn btn-danger d-block mx-5"
                   data-mdb-toggle="modal"
-                  href="#meetings-organizer-modal"
+                  href="#movies-galaxy-modal"
                   role="button"
-                  >Details</a
+                  ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
                 >
               </div>
             </div>

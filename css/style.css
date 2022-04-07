@@ -15,6 +15,11 @@ body {
 
 /* Navbar */
 
+#navbar {
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  opacity: 0.8;
+}
+
 .logo-img {
   border-radius: 6px;
   padding: 1px;
@@ -87,7 +92,11 @@ body {
 /* Skills Section */
 
 #skills-section {
-  background-color: var(--bg-color-secondary);
+  background-color: var(--bg-color-primary);
+}
+
+.skill-description {
+  opacity: 0.8;
 }
 
 .progress-bar {
@@ -413,7 +422,7 @@ body {
 /* Projects Section */
 
 #projects-section {
-  background-color: var(--bg-color-primary);
+  background-color: var(--bg-color-secondary);
 }
 
 .card {
@@ -490,6 +499,24 @@ body {
 }
 
 /* Projects Section */
+
+/* About Section */
+
+#about-section {
+  background-color: var(--bg-color-secondary);
+}
+
+.about-title {
+  color: blueviolet;
+}
+
+.vl {
+  border: 3px solid silver;
+  height: 50px;
+  border-radius: 8px;
+}
+
+/* About Section */
 
 /* Global animations */
 
