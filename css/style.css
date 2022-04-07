@@ -89,6 +89,33 @@ body {
 
 /* Intro Section */
 
+/* About Section */
+
+#about-section {
+  background-color: var(--bg-color-secondary);
+}
+
+.about-title {
+  color: blueviolet;
+}
+
+.timeline-wrapper {
+  max-width: 80%;
+  background: linear-gradient(
+    to left,
+    hsla(0, 0%, 0%, 0) 20%,
+    hsla(0, 0%, 0%, 0.1)
+  );
+}
+
+.vl {
+  border: 0.1rem solid var(--mdb-primary);
+  height: inherit;
+  border-radius: 6px;
+}
+
+/* About Section */
+
 /* Skills Section */
 
 #skills-section {
@@ -503,24 +530,6 @@ body {
 }
 
 /* Projects Section */
-
-/* About Section */
-
-#about-section {
-  background-color: var(--bg-color-secondary);
-}
-
-.about-title {
-  color: blueviolet;
-}
-
-.vl {
-  border: 3px solid silver;
-  height: 50px;
-  border-radius: 8px;
-}
-
-/* About Section */
 
 /* Global animations */
 
