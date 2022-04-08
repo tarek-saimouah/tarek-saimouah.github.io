@@ -23,7 +23,7 @@ body {
 .contacts {
   list-style: none;
   justify-content: space-around;
-  max-width: 80%;
+  max-width: 75%;
 }
 
 .contact-link {
@@ -561,6 +561,28 @@ body {
   0% {
     opacity: 0;
     transform: translateY(15%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+/* section-content-up class and keyframes */
+.section-content-up {
+  animation: 1s anim-section-up ease-out;
+}
+@keyframes anim-section-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
   }
   20% {
     opacity: 0;

@@ -23,6 +23,7 @@ export const animateSectionContentUp = (section) => {
 
       if (entry.isIntersecting) {
         animate(element);
+        observer.disconnect();
         return;
       }
     });
@@ -30,9 +31,9 @@ export const animateSectionContentUp = (section) => {
   observer.observe(section);
 
   function animate(sectionContent) {
-    sectionContent.classList.add('line-up');
+    sectionContent.classList.add('section-content-up');
     setTimeout(() => {
-      sectionContent.classList.remove('line-up');
+      sectionContent.classList.remove('section-content-up');
     }, 2000);
   }
 };
