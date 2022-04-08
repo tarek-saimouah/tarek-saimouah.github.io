@@ -15,6 +15,11 @@ body {
 
 /* Global Style */
 
+.section-title {
+  font-family: 'Ubuntu', 'Roboto', serif;
+  font-weight: bold;
+}
+
 .section-content {
   padding-top: 6%;
   padding-bottom: 6%;
@@ -55,11 +60,13 @@ body {
 #intro-section {
   background-color: var(--bg-color-primary);
   padding-top: 4%;
+  min-height: 80vh;
 }
 
 #description {
   color: blueviolet;
   display: inline-block;
+  font-family: 'Ubuntu', 'Roboto', serif;
   font-weight: bold;
 }
 
@@ -116,6 +123,8 @@ body {
 }
 
 .about-title {
+  font-family: 'Ubuntu', 'Roboto', serif;
+  font-weight: bold;
   color: blueviolet;
 }
 

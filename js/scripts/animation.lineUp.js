@@ -1,6 +1,16 @@
 export const animateLineUp = (element, texts, interval = 4000) => {
   let textIndex = 1;
+  const descriptionText =
+    document.getElementsByClassName('description-text')[0];
+
   setInterval(() => {
+    // set description-text inner text to 'I am an' when description is equal 'Android Developer'
+    if (textIndex === 1) {
+      descriptionText.innerText = 'I am an';
+    } else {
+      descriptionText.innerText = 'I am a';
+    }
+
     animate(element, texts[textIndex]);
 
     if (textIndex + 1 < texts.length) textIndex++;
