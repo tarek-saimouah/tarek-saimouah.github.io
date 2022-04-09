@@ -560,6 +560,21 @@ body {
 
 /* Projects Section */
 
+/* Contact Section */
+
+#contact-section {
+  background-color: var(--bg-color-primary);
+}
+
+.contact-section-links {
+  list-style: none;
+  justify-content: space-between;
+  width: inherit;
+  padding-left: 0;
+}
+
+/* Contact Section */
+
 /* Global animations */
 
 /* lineup class and keyframes */

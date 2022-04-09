@@ -41,3 +41,8 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+// Footer copyright text
+const copyright = document.getElementById('copyright');
+copyright.innerHTML =
+  `© ${new Date().getFullYear()} Copyright: ` + copyright.innerHTML;
