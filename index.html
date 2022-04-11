@@ -165,12 +165,13 @@
                 Full Stack Js Developer.
               </h2>
             </div>
-            <button
-              type="button"
+            <a
+              href="#contact-section"
+              role="button"
               class="btn btn-secondary btn-rounded btn-lg my-3"
             >
               Contact Me
-            </button>
+            </a>
 
             <!-- social links -->
             <ul class="d-flex flex-row ms-auto m-5 px-5 mx-auto contacts">
@@ -243,7 +244,7 @@
             <strong>(Kotlin, Java)</strong>.
           </p>
           <p class="lead mt-2">
-            I like to engage in many software development stages like
+            I like to engage in many software development phases like
             <strong> Backend </strong>, <strong> Frontend </strong>,
             <strong> Mobile </strong>, <strong> Testing </strong>,
             <strong> Deployment </strong> and more.
@@ -251,12 +252,13 @@
           <p class="lead mt-2">
             Let me know if i can be a part of your next project.
           </p>
-          <button
-            type="button"
-            class="btn btn-secondary btn-rounded btn-lg my-2"
+          <a
+            href="#contact-section"
+            role="button"
+            class="btn btn-secondary btn-rounded btn-lg my-3"
           >
             Contact Me
-          </button>
+          </a>
         </div>
         <!-- /About Text -->
 
@@ -1602,18 +1604,16 @@
             <h3 class="about-title my-4">Send me an email</h3>
 
             <!-- Contact form -->
-            <form>
+            <form id="contact-me-form">
               <!-- Name input -->
               <div class="form-outline form-white mb-4">
                 <input type="text" id="name" class="form-control" required />
                 <label class="form-label" for="name">Name</label>
+                <div class="invalid-feedback">Please enter your name.</div>
               </div>
 
               <!-- Email input -->
-              <div class="form-outline form-white input-group mb-4">
-                <span class="input-group-text text-light" id="inputGroupPrepend"
-                  >@</span
-                >
+              <div class="form-outline form-white input-group mb-4 mt-5">
                 <input
                   type="email"
                   id="email"
@@ -1627,17 +1627,35 @@
                 </div>
               </div>
 
+              <!-- Subject input -->
+              <div class="form-outline form-white mb-4 mt-5">
+                <input type="text" id="subject" class="form-control" required />
+                <label class="form-label" for="subject">Subject</label>
+                <div class="invalid-feedback">Please enter a subject.</div>
+              </div>
+
               <!-- Message input -->
               <div class="form-outline form-white mb-4 mt-5">
-                <textarea class="form-control" id="message" rows="4"></textarea>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  maxlength="300"
+                  minlength="16"
+                  required
+                ></textarea>
                 <label class="form-label" for="message"
                   ><i class="far fa-comment-alt fa-xs me-2"></i>Message</label
                 >
               </div>
 
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-lg px-5 mb-4">
-                Send
+              <button
+                id="formSubmitBtn"
+                type="submit"
+                class="btn btn-secondary btn-lg mb-4"
+              >
+                Send Message
               </button>
             </form>
             <!-- /Contact form -->
@@ -1645,55 +1663,14 @@
           <!-- /Contact -->
 
           <!-- Contact -->
-          <div class="col-sm-12 col-md-6 col-lg-6 mt-3 px-5">
-            <h3 class="about-title my-4">Find me at</h3>
-
-            <!-- social links -->
-            <ul class="contact-section-links d-flex">
-              <!-- Icons -->
-              <li class="me-lg-0">
-                <a
-                  class="contact-link"
-                  href="https://gitlab.com/Tarek_Saimouah"
-                  target="_blank"
-                >
-                  <i class="fab fa-gitlab fa-lg"></i>
-                </a>
-              </li>
-              <li class="me-lg-0">
-                <a
-                  class="contact-link"
-                  href="https://github.com/tarek-saimouah"
-                  target="_blank"
-                >
-                  <i class="fab fa-github fa-lg"></i>
-                </a>
-              </li>
-              <li class="me-lg-0">
-                <a
-                  class="contact-link"
-                  href="https://linkedin.com/in/tareksaimouah"
-                  target="_blank"
-                >
-                  <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-              </li>
-              <li class="me-lg-0">
-                <a
-                  class="contact-link"
-                  href="https://www.facebook.com/tarek.nsaimoaa/"
-                  target="_blank"
-                >
-                  <i class="fab fa-facebook fa-lg"></i>
-                </a>
-              </li>
-            </ul>
-            <!-- social links -->
-            <!-- Home Address -->
-            <p class="ms-1 mt-4">
-              <i class="fas fa-map-marker-alt fa-lg me-3"></i> As Suwayda, Syria
-            </p>
-            <!-- Home Address -->
+          <div
+            class="col-sm-12 col-md-6 col-lg-6 mt-3 p-5 d-flex align-items-center"
+          >
+            <img
+              src="img/contact-me.svg"
+              class="img-fluid rounded"
+              alt="Contact me image"
+            />
           </div>
           <!-- /Contact -->
         </div>
@@ -1712,7 +1689,7 @@
   <!-- Footer -->
   <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
-    <div class="container text-center p-4">
+    <div class="container text-center p-3">
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
           <!-- social links -->
@@ -1774,7 +1751,9 @@
       class="text-center text-light p-3"
       style="background-color: rgba(0, 0, 0, 0.2)"
     >
-      <a class="text-light" href="#intro-section">tareksaimouah.dev</a>
+      <a class="text-light" href="#intro-section"
+        ><strong class="mx-1">tareksaimouah.dev</strong></a
+      >
     </div>
     <!-- Copyright -->
   </footer>

@@ -3,6 +3,7 @@ import {
   animateSectionContentUp,
 } from './scripts/animation.lineUp.js';
 import { setAnimationObserver } from './scripts/observer.js';
+import { submitForm } from './scripts/form.submit.js';
 
 // description text animation in intro section
 const description = document.getElementById('description');
@@ -46,3 +47,7 @@ window.onscroll = function () {
 const copyright = document.getElementById('copyright');
 copyright.innerHTML =
   `© ${new Date().getFullYear()} Copyright: ` + copyright.innerHTML;
+
+// Contact Me Form submit
+const contactMeForm = document.getElementById('contact-me-form');
+contactMeForm.addEventListener('submit', submitForm);

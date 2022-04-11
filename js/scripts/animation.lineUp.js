@@ -15,7 +15,7 @@ export const animateLineUp = (element, texts, interval = 4000) => {
 
     if (textIndex + 1 < texts.length) textIndex++;
     else textIndex = 0;
-  }, 5000);
+  }, interval);
 
   function animate(element, text) {
     element.innerText = text;
