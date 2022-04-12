@@ -485,6 +485,11 @@ body {
   background-color: var(--bg-color-secondary);
 }
 
+.projects-row-title {
+  font-family: 'Ubuntu', 'Roboto', serif;
+  color: #eeeeee;
+}
+
 .card {
   color: var(--bg-color-primary);
 }

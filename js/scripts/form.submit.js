@@ -53,20 +53,27 @@ export async function submitForm(event) {
   showSpinnerOnSubmitButton();
   disableSubmitButton();
 
-  const result = await sendEmailRequest(formData);
+  try {
+    const result = await sendEmailRequest(formData);
 
-  if (result.status === 'ok') {
-    disableFormInputs();
-    alert(result.message);
-  } else if (result.status === 429) {
-    disableFormInputs();
-    alert(result.message);
-  } else {
-    alert(result.message);
+    if (result.status === 'ok') {
+      disableFormInputs();
+      alert(result.message);
+    } else if (result.status === 429) {
+      disableFormInputs();
+      alert(result.message);
+    } else {
+      alert(result.message);
+      enableSubmitButton();
+    }
+
+    hideSpinnerOnSubmitButton();
+  } catch (error) {
+    alert(error);
+
     enableSubmitButton();
+    hideSpinnerOnSubmitButton();
   }
-
-  hideSpinnerOnSubmitButton();
 }
 
 const sendEmailRequest = (payload) => {
@@ -86,7 +93,7 @@ const sendEmailRequest = (payload) => {
             'e213e014b74445418461848abc6f706be059ec9ed96cfb3b9e79f939b7177ed4',
         },
       });
-      console.log(response);
+
       if (response.status === 429) {
         resolve({ status: response.status, message: response.statusText });
       }
@@ -94,6 +101,9 @@ const sendEmailRequest = (payload) => {
       const json = await response.json();
       resolve(json);
     } catch (err) {
+      if (!err.message) {
+        reject('An Error Occurred !');
+      }
       reject(err.message);
     }
   });
@@ -111,17 +121,24 @@ const disableFormInputs = () => {
   const subject = document.getElementById('subject');
   const message = document.getElementById('message');
 
-  setDisabledAttributesAndStyles(name);
-  setDisabledAttributesAndStyles(email);
-  setDisabledAttributesAndStyles(subject);
-  setDisabledAttributesAndStyles(message);
+  const inputs = [name, email, subject, message];
+
+  setDisabledAttributesAndStyles(inputs);
 };
 
-const setDisabledAttributesAndStyles = (input) => {
-  input.setAttribute('disabled', true);
-  input.style.background = 'none';
-  input.style.color = 'white';
-  input.style.fontWeight = 'lighter';
+const setDisabledAttributesAndStyles = (inputs) => {
+  inputs.forEach((input) => {
+    input.setAttribute('disabled', true);
+    input.style.background = 'none';
+    input.style.color = 'white';
+    input.style.fontWeight = 'lighter';
+  });
+};
+
+const clearInputs = (inputs) => {
+  inputs.forEach((element) => {
+    element.value = '';
+  });
 };
 
 const disableSubmitButton = () => {
@@ -129,7 +146,7 @@ const disableSubmitButton = () => {
 };
 
 const enableSubmitButton = () => {
-  document.getElementById('formSubmitBtn').setAttribute('disabled', false);
+  document.getElementById('formSubmitBtn').removeAttribute('disabled');
 };
 
 const showSpinnerOnSubmitButton = () => {

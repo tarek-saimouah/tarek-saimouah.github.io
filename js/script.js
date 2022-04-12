@@ -43,6 +43,16 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
+// show more button on click listener to hide and show more projects section
+const btnShowMore = document.getElementById('show-more-btn');
+const moreProjectsSection = document.getElementsByClassName('more-projects')[0];
+
+btnShowMore.onclick = () => {
+  btnShowMore.style.display = 'none';
+  animateSectionContentUp(moreProjectsSection);
+  moreProjectsSection.style.display = 'block';
+};
+
 // Footer copyright text
 const copyright = document.getElementById('copyright');
 copyright.innerHTML =

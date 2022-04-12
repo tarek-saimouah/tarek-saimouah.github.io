@@ -750,6 +750,10 @@
         <h1 class="mb-5 section-title">My Projects</h1>
         <!-- Projects row -->
         <div class="row my-3">
+          <h2 class="mt-2 projects-row-title text-start ms-5">
+            <i style="color: var(--mdb-light)" class="fas fa-code me-2"></i>
+            Web Projects
+          </h2>
           <!-- Project Flamingo Reading Tracker Web -->
           <div class="col-sm-12 col-md-6 col-lg-4 p-5">
             <div class="card mx-auto">
@@ -921,7 +925,7 @@
                 data-mdb-ripple-color="light"
               >
                 <img
-                  style="width: 100%"
+                  style="height: 340px"
                   src="img/admin-dashboard.png"
                   class="img-fluid img-thumbnail card-img"
                 />
@@ -1057,12 +1061,17 @@
             </div>
           </div>
           <!-- /Admin Dashboard scrollable modal -->
+        </div>
+        <!-- /Projects row -->
 
-          <hr
-            class="d-block d-sm-block d-md-none mx-auto"
-            style="max-width: 70%"
-          />
+        <hr class="d-block mx-auto" style="max-width: 70%" />
 
+        <!-- Projects row -->
+        <div class="row my-3">
+          <h2 class="mt-5 projects-row-title text-start ms-5">
+            <i style="color: #a4c639" class="fab fa-android me-2 mt-1"></i>
+            Android Projects
+          </h2>
           <!-- Project Movies Galaxy -->
           <div class="col-sm-12 col-md-6 col-lg-4 p-5">
             <div class="card mx-auto">
@@ -1589,6 +1598,322 @@
           <!-- /Meetings Organizer scrollable modal -->
         </div>
         <!-- /Projects row -->
+
+        <button
+          id="show-more-btn"
+          class="btn btn-success btn-rounded mt-3 mx-auto btn-lg"
+        >
+          <i class="fas fa-chevron-circle-down fa-lg me-2"></i>Show more
+        </button>
+        <div style="display: none" class="more-projects">
+          <hr class="d-block mx-auto" style="max-width: 70%" />
+
+          <!-- Projects row -->
+          <div class="row my-3">
+            <h2 class="mt-5 projects-row-title text-start ms-5">
+              <i
+                style="color: var(--mdb-light)"
+                class="fas fa-desktop me-2"
+              ></i>
+              Other Projects
+            </h2>
+            <!-- Project Real Estate -->
+            <div class="col-sm-12 col-md-6 col-lg-4 p-5">
+              <div class="card mx-auto">
+                <div
+                  class="bg-image hover-overlay ripple card-img-wrapper"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    style="height: 340px"
+                    src="img/mysql-java-logo.png"
+                    class="img-fluid img-thumbnail card-img"
+                  />
+                  <a
+                    data-mdb-toggle="modal"
+                    href="#real-estate-modal"
+                    role="button"
+                  >
+                    <!-- Mask -->
+                    <div
+                      class="mask"
+                      style="
+                        background: linear-gradient(
+                          to bottom,
+                          hsla(0, 0%, 0%, 0),
+                          hsla(263, 80%, 20%, 0.5)
+                        );
+                      "
+                    >
+                      <div
+                        class="bottom-0 d-flex align-items-end h-100 text-center justify-content-center"
+                      >
+                        <div>
+                          <h5 class="fw-bold text-white mb-4">
+                            Real Estate Database
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Real Estate Database</h5>
+                  <h6 class="card-subtitle mb-2 technology">
+                    <span class="mx-2">Java</span>
+                    <span class="mx-2">Javax.swing</span>
+                    <span class="mx-2">MySQL</span>
+                    <span class="mx-2">JDBC</span>
+                  </h6>
+                  <hr style="width: 80%" class="mx-auto" />
+                  <p class="card-text">
+                    Java desktop application to manage a MySQL database for Real
+                    Estate business.
+                  </p>
+                  <a
+                    class="btn btn-danger d-block mx-5"
+                    data-mdb-toggle="modal"
+                    href="#real-estate-modal"
+                    role="button"
+                    ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Real Estate Database scrollable modal -->
+            <div id="real-estate-modal" class="modal mx-auto" tabindex="-1">
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Real Estate Database Details</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-mdb-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <h6 class="modal-body-title">Technical Information:</h6>
+                    <ul>
+                      <li>
+                        Built with
+                        <span class="technology">Javax.swing</span> Package.
+                      </li>
+                      <li>
+                        Make CRUD operations on database using
+                        <span class="technology">JDBC</span> database driver.
+                      </li>
+                      <li><span class="technology">MySQL</span> Database.</li>
+                      <li>Admin user account with password.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Real Estate Database scrollable modal -->
+
+            <hr
+              class="d-block d-sm-block d-md-none mx-auto"
+              style="max-width: 70%"
+            />
+
+            <!-- Project Memories Maker -->
+            <div class="col-sm-12 col-md-6 col-lg-4 p-5">
+              <div class="card mx-auto">
+                <div
+                  class="bg-image hover-overlay ripple card-img-wrapper"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    style="width: 100%"
+                    src="img/memories-maker logo.png"
+                    class="img-fluid img-thumbnail card-img"
+                  />
+                  <a
+                    data-mdb-toggle="modal"
+                    href="#memories-maker-modal"
+                    role="button"
+                  >
+                    <!-- Mask -->
+                    <div
+                      class="mask"
+                      style="
+                        background: linear-gradient(
+                          to bottom,
+                          hsla(0, 0%, 0%, 0),
+                          hsla(263, 80%, 20%, 0.5)
+                        );
+                      "
+                    >
+                      <div
+                        class="bottom-0 d-flex align-items-end h-100 text-center justify-content-center"
+                      >
+                        <div>
+                          <h5 class="fw-bold text-white mb-4">
+                            Memories Maker
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Memories Maker</h5>
+                  <h6 class="card-subtitle mb-2 technology">
+                    <span class="mx-2">Andorid</span>
+                    <span class="mx-2">Java</span>
+                    <span class="mx-2">SQLite</span>
+                  </h6>
+                  <hr style="width: 80%" class="mx-auto" />
+                  <p class="card-text">
+                    Android application for taking photos and save it with a
+                    text as a memory.
+                  </p>
+                  <a
+                    class="btn btn-danger d-block mx-5"
+                    data-mdb-toggle="modal"
+                    href="#memories-maker-modal"
+                    role="button"
+                    ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Memories Maker scrollable modal -->
+            <div id="memories-maker-modal" class="modal mx-auto" tabindex="-1">
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Memories Maker Details</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-mdb-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <h6 class="modal-body-title">Technical Information:</h6>
+                    <ul>
+                      <li>Built with <span class="technology">Java</span>.</li>
+                      <li>
+                        <span class="technology">SQLite</span> database for
+                        saving memories.
+                      </li>
+                      <li>Password protected app.</li>
+                      <li>
+                        <span class="technology">Camera</span> and
+                        <span class="technology">Storage</span> Permissions.
+                      </li>
+                      <li>
+                        Image bitmaps and files operations with I/O streams.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Memories Maker scrollable modal -->
+
+            <!-- Project Notes App -->
+            <div class="col-sm-12 col-md-6 col-lg-4 p-5">
+              <div class="card mx-auto">
+                <div
+                  class="bg-image hover-overlay ripple card-img-wrapper"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    style="width: 100%"
+                    src="img/notes-app-logo.png"
+                    class="img-fluid img-thumbnail card-img"
+                  />
+                  <a data-mdb-toggle="modal" href="#notes-modal" role="button">
+                    <!-- Mask -->
+                    <div
+                      class="mask"
+                      style="
+                        background: linear-gradient(
+                          to bottom,
+                          hsla(0, 0%, 0%, 0),
+                          hsla(263, 80%, 20%, 0.5)
+                        );
+                      "
+                    >
+                      <div
+                        class="bottom-0 d-flex align-items-end h-100 text-center justify-content-center"
+                      >
+                        <div>
+                          <h5 class="fw-bold text-white mb-4">Notes App</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Notes App</h5>
+                  <h6 class="card-subtitle mb-2 technology">
+                    <span class="mx-2">Andorid</span>
+                    <span class="mx-2">Java</span>
+                    <span class="mx-2">SQLite</span>
+                  </h6>
+                  <hr style="width: 80%" class="mx-auto" />
+                  <p class="card-text">
+                    Android application for saving text notes.
+                  </p>
+                  <a
+                    class="btn btn-danger d-block mx-5"
+                    data-mdb-toggle="modal"
+                    href="#notes-modal"
+                    role="button"
+                    ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Notes App scrollable modal -->
+            <div id="notes-modal" class="modal mx-auto" tabindex="-1">
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Notes App Details</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-mdb-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <h6 class="modal-body-title">Technical Information:</h6>
+                    <ul>
+                      <li>Built with <span class="technology">Java</span>.</li>
+                      <li>
+                        <span class="technology">SQLite</span> database for
+                        saving notes.
+                      </li>
+                      <li>
+                        Simple layouts with detailed information about notes
+                        like date, time and author.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /Notes App scrollable modal -->
+          </div>
+          <!-- /Projects row -->
+        </div>
       </div>
     </section>
     <!-- /Projects Section -->
