@@ -573,6 +573,10 @@ body {
   padding-left: 0;
 }
 
+.spinner-hide {
+  display: none;
+}
+
 /* Contact Section */
 
 /* Global animations */

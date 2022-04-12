@@ -49,7 +49,12 @@ export async function submitForm(event) {
   if (!validForm) {
     return;
   }
+
+  showSpinnerOnSubmitButton();
+  disableSubmitButton();
+
   const result = await sendEmailRequest(formData);
+
   if (result.status === 'ok') {
     disableFormInputs();
     alert(result.message);
@@ -58,7 +63,10 @@ export async function submitForm(event) {
     alert(result.message);
   } else {
     alert(result.message);
+    enableSubmitButton();
   }
+
+  hideSpinnerOnSubmitButton();
 }
 
 const sendEmailRequest = (payload) => {
@@ -107,8 +115,6 @@ const disableFormInputs = () => {
   setDisabledAttributesAndStyles(email);
   setDisabledAttributesAndStyles(subject);
   setDisabledAttributesAndStyles(message);
-
-  document.getElementById('formSubmitBtn').setAttribute('disabled', true);
 };
 
 const setDisabledAttributesAndStyles = (input) => {
@@ -116,4 +122,22 @@ const setDisabledAttributesAndStyles = (input) => {
   input.style.background = 'none';
   input.style.color = 'white';
   input.style.fontWeight = 'lighter';
+};
+
+const disableSubmitButton = () => {
+  document.getElementById('formSubmitBtn').setAttribute('disabled', true);
+};
+
+const enableSubmitButton = () => {
+  document.getElementById('formSubmitBtn').setAttribute('disabled', false);
+};
+
+const showSpinnerOnSubmitButton = () => {
+  const spinner = document.getElementById('loading-spinner');
+  spinner.classList.remove('spinner-hide');
+};
+
+const hideSpinnerOnSubmitButton = () => {
+  const spinner = document.getElementById('loading-spinner');
+  spinner.classList.add('spinner-hide');
 };
