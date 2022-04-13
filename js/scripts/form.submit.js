@@ -1,163 +1,360 @@
-export async function submitForm(event) {
-  event.preventDefault();
-
-  const name = event.target.name.value;
-  const subject = event.target.subject.value;
-  const email = event.target.email.value;
-  const message = event.target.message.value;
-
-  let validForm = true;
-
-  const formData = {
-    name,
-    subject,
-    email,
-    message,
-  };
-
-  if (!name) {
-    document.getElementById('name').classList.add('is-invalid');
-    validForm = false;
-
-    setTimeout(() => {
-      document.getElementById('name').classList.remove('is-invalid');
-    }, 3000);
-  }
-
-  if (!subject) {
-    document.getElementById('subject').classList.add('is-invalid');
-    validForm = false;
-
-    setTimeout(() => {
-      document.getElementById('subject').classList.remove('is-invalid');
-    }, 3000);
-  }
-
-  if (!email || !validEmail(email)) {
-    document.getElementById('email').classList.add('is-invalid');
-    validForm = false;
-
-    setTimeout(() => {
-      document.getElementById('email').classList.remove('is-invalid');
-    }, 3000);
-  }
-
-  if (!message) {
-    validForm = false;
-  }
-
-  if (!validForm) {
-    return;
-  }
-
-  showSpinnerOnSubmitButton();
-  disableSubmitButton();
-
-  try {
-    const result = await sendEmailRequest(formData);
-
-    if (result.status === 'ok') {
-      disableFormInputs();
-      alert(result.message);
-    } else if (result.status === 429) {
-      disableFormInputs();
-      alert(result.message);
-    } else {
-      alert(result.message);
-      enableSubmitButton();
+(function (_0x221bf8, _0x52dc02) {
+  const _0x300486 = _0x3bf4,
+    _0x3090a5 = _0x221bf8();
+  while (!![]) {
+    try {
+      const _0x2de80f =
+        parseInt(_0x300486(0x174)) / 0x1 +
+        -parseInt(_0x300486(0x17f)) / 0x2 +
+        parseInt(_0x300486(0x16b)) / 0x3 +
+        (-parseInt(_0x300486(0x199)) / 0x4) *
+          (parseInt(_0x300486(0x189)) / 0x5) +
+        (-parseInt(_0x300486(0x16a)) / 0x6) *
+          (parseInt(_0x300486(0x167)) / 0x7) +
+        parseInt(_0x300486(0x16c)) / 0x8 +
+        parseInt(_0x300486(0x188)) / 0x9;
+      if (_0x2de80f === _0x52dc02) break;
+      else _0x3090a5['push'](_0x3090a5['shift']());
+    } catch (_0xdd890) {
+      _0x3090a5['push'](_0x3090a5['shift']());
     }
-
+  }
+})(_0x45a6, 0x75f57),
+  (function (_0x1f7ecf, _0x25777e) {
+    const _0x481c81 = _0x3bf4,
+      _0x31793a = _0x3f02,
+      _0x5ad933 = _0x1f7ecf();
+    while (!![]) {
+      try {
+        const _0x1e004c =
+          (parseInt(_0x31793a(0x14d)) / 0x1) *
+            (parseInt(_0x31793a(0x15f)) / 0x2) +
+          parseInt(_0x31793a(0x141)) / 0x3 +
+          (parseInt(_0x31793a(0x148)) / 0x4) *
+            (parseInt(_0x31793a(0x142)) / 0x5) +
+          (parseInt(_0x31793a(0x15c)) / 0x6) *
+            (parseInt(_0x31793a(0x155)) / 0x7) +
+          (parseInt(_0x31793a(0x140)) / 0x8) *
+            (parseInt(_0x31793a(0x15b)) / 0x9) +
+          -parseInt(_0x31793a(0x158)) / 0xa +
+          -parseInt(_0x31793a(0x151)) / 0xb;
+        if (_0x1e004c === _0x25777e) break;
+        else _0x5ad933['push'](_0x5ad933['shift']());
+      } catch (_0x41eeae) {
+        _0x5ad933[_0x481c81(0x185)](_0x5ad933[_0x481c81(0x171)]());
+      }
+    }
+  })(_0x5839, 0x9caeb);
+export async function submitForm(_0x437a1c) {
+  const _0x24f526 = _0x3bf4,
+    _0xd59b33 = _0x3f02;
+  _0x437a1c['preventDef' + _0x24f526(0x17c)]();
+  const _0x38f35f =
+      _0x437a1c[_0xd59b33(0x145)][_0xd59b33(0x14a)][_0xd59b33(0x13f)],
+    _0x31438c = _0x437a1c[_0xd59b33(0x145)][_0x24f526(0x182)][_0xd59b33(0x13f)],
+    _0x5ca09d = _0x437a1c[_0xd59b33(0x145)][_0xd59b33(0x15e)][_0x24f526(0x17e)],
+    _0x2ac7a8 = _0x437a1c[_0xd59b33(0x145)][_0x24f526(0x193)][_0xd59b33(0x13f)];
+  let _0x4755ad = !![];
+  const _0x4bff18 = {
+    name: _0x38f35f,
+    subject: _0x31438c,
+    email: _0x5ca09d,
+    message: _0x2ac7a8,
+  };
+  !_0x38f35f &&
+    (document[_0xd59b33(0x163)](_0x24f526(0x18c))[_0xd59b33(0x160)][
+      _0xd59b33(0x162)
+    ](_0xd59b33(0x156)),
+    (_0x4755ad = ![]),
+    setTimeout(() => {
+      const _0x1ccdea = _0x24f526,
+        _0x310801 = _0xd59b33;
+      document[_0x310801(0x163)](_0x1ccdea(0x18c))[_0x310801(0x160)][
+        _0x1ccdea(0x191)
+      ](_0x310801(0x156));
+    }, 0xbb8)),
+    !_0x31438c &&
+      (document[_0x24f526(0x15d) + _0x24f526(0x181)](_0xd59b33(0x147))[
+        _0xd59b33(0x160)
+      ][_0xd59b33(0x162)](_0xd59b33(0x156)),
+      (_0x4755ad = ![]),
+      setTimeout(() => {
+        const _0x568aba = _0xd59b33;
+        document[_0x568aba(0x163)](_0x568aba(0x147))[_0x568aba(0x160)][
+          _0x568aba(0x159)
+        ](_0x568aba(0x156));
+      }, 0xbb8)),
+    (!_0x5ca09d || !validEmail(_0x5ca09d)) &&
+      (document[_0xd59b33(0x163)](_0x24f526(0x16e))[_0xd59b33(0x160)][
+        _0xd59b33(0x162)
+      ](_0xd59b33(0x156)),
+      (_0x4755ad = ![]),
+      setTimeout(() => {
+        const _0x16d5fe = _0x24f526,
+          _0x278249 = _0xd59b33;
+        document[_0x278249(0x163)](_0x278249(0x15e))[_0x278249(0x160)][
+          _0x278249(0x159)
+        ](_0x16d5fe(0x183));
+      }, 0xbb8)),
+    !_0x2ac7a8 && (_0x4755ad = ![]);
+  if (!_0x4755ad) return;
+  showSpinnerOnSubmitButton(), disableSubmitButton();
+  try {
+    const _0x332966 = await sendEmailRequest(_0x4bff18);
+    if (_0x332966[_0xd59b33(0x153)] === 'ok')
+      disableFormInputs(), alert(_0x332966[_0xd59b33(0x152)]);
+    else
+      _0x332966[_0xd59b33(0x153)] === 0x1ad
+        ? (disableFormInputs(), alert(_0x332966[_0xd59b33(0x152)]))
+        : (alert(_0x332966[_0xd59b33(0x152)]), enableSubmitButton());
     hideSpinnerOnSubmitButton();
-  } catch (error) {
-    alert(error);
-
-    enableSubmitButton();
-    hideSpinnerOnSubmitButton();
+  } catch (_0x2dd017) {
+    alert(_0x2dd017), enableSubmitButton(), hideSpinnerOnSubmitButton();
   }
 }
-
-const sendEmailRequest = (payload) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const response = await fetch(
-        'https://tarek-portfolio-email-server.herokuapp.com/send-mail',
-        {
-          // Adding method type
-          method: 'POST',
-
-          // Adding body or contents to send
-          body: JSON.stringify(payload),
-
-          // Adding headers to the request
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization-Key':
-              'e213e014b74445418461848abc6f706be059ec9ed96cfb3b9e79f939b7177ed4',
-          },
-        }
-      );
-
-      if (response.status === 429) {
-        resolve({ status: response.status, message: response.statusText });
+const sendEmailRequest = (_0x4890fd) => {
+    return new Promise(async (_0x37201a, _0x4a8876) => {
+      const _0x529242 = _0x3bf4,
+        _0x2147f9 = _0x3f02;
+      try {
+        const _0x94bc15 = await fetch(
+          _0x529242(0x172) +
+            'rek-portfo' +
+            _0x529242(0x195) +
+            _0x529242(0x17d) +
+            _0x529242(0x17a) +
+            _0x529242(0x160),
+          {
+            method: _0x2147f9(0x157),
+            body: JSON[_0x2147f9(0x15a)](_0x4890fd),
+            headers: {
+              'Content-Type': _0x2147f9(0x149),
+              'Authorization-Key': _0x2147f9(0x14e),
+            },
+          }
+        );
+        _0x94bc15[_0x2147f9(0x153)] === 0x1ad &&
+          _0x37201a({
+            status: _0x94bc15[_0x529242(0x173)],
+            message: _0x94bc15[_0x2147f9(0x13c)],
+          });
+        const _0x3b18d8 = await _0x94bc15[_0x2147f9(0x14b)]();
+        _0x37201a(_0x3b18d8);
+      } catch (_0x369a6d) {
+        !_0x369a6d[_0x529242(0x193)] && _0x4a8876(_0x2147f9(0x161)),
+          _0x4a8876(_0x369a6d[_0x2147f9(0x152)]);
       }
-
-      const json = await response.json();
-      resolve(json);
-    } catch (err) {
-      if (!err.message) {
-        reject('An Error Occurred !');
-      }
-      reject(err.message);
-    }
-  });
-};
-
-const validEmail = (email) => {
-  return /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
-    email
+    });
+  },
+  validEmail = (_0x3898c1) => {
+    const _0x16657a = _0x3f02;
+    return /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/[
+      _0x16657a(0x13a)
+    ](_0x3898c1);
+  },
+  disableFormInputs = () => {
+    const _0x32f3b8 = _0x3bf4,
+      _0x375b29 = _0x3f02,
+      _0x4be8bf = document[_0x375b29(0x163)](_0x32f3b8(0x18c)),
+      _0x1612dd = document[_0x375b29(0x163)](_0x375b29(0x15e)),
+      _0x5afd33 = document[_0x375b29(0x163)](_0x32f3b8(0x182)),
+      _0x1a0a37 = document[_0x32f3b8(0x15d) + _0x32f3b8(0x181)](
+        _0x32f3b8(0x193)
+      ),
+      _0x41730c = [_0x4be8bf, _0x1612dd, _0x5afd33, _0x1a0a37];
+    setDisabledAttributesAndStyles(_0x41730c);
+  },
+  setDisabledAttributesAndStyles = (_0x5771fc) => {
+    const _0x412a2b = _0x3f02;
+    _0x5771fc[_0x412a2b(0x150)]((_0x157135) => {
+      const _0x623213 = _0x3bf4,
+        _0x5a9baf = _0x412a2b;
+      _0x157135[_0x5a9baf(0x15d)](_0x5a9baf(0x165), !![]),
+        (_0x157135[_0x5a9baf(0x13e)][_0x5a9baf(0x13b)] = _0x5a9baf(0x143)),
+        (_0x157135[_0x623213(0x163)][_0x5a9baf(0x154)] = _0x5a9baf(0x14c)),
+        (_0x157135[_0x623213(0x163)][_0x623213(0x18b)] = _0x5a9baf(0x144));
+    });
+  },
+  clearInputs = (_0x245b77) => {
+    const _0x438e5b = _0x3f02;
+    _0x245b77[_0x438e5b(0x150)]((_0x11e1bb) => {
+      const _0x352884 = _0x438e5b;
+      _0x11e1bb[_0x352884(0x13f)] = '';
+    });
+  },
+  disableSubmitButton = () => {
+    const _0x43d0d1 = _0x3bf4,
+      _0x5961f8 = _0x3f02;
+    document[_0x43d0d1(0x15d) + 'ById'](_0x5961f8(0x13d))[
+      _0x43d0d1(0x18f) + 'te'
+    ](_0x5961f8(0x165), !![]);
+  },
+  enableSubmitButton = () => {
+    const _0x34ba9a = _0x3f02;
+    document[_0x34ba9a(0x163)](_0x34ba9a(0x13d))[_0x34ba9a(0x164)]('disabled');
+  },
+  showSpinnerOnSubmitButton = () => {
+    const _0x196ff1 = _0x3f02,
+      _0x54d994 = document[_0x196ff1(0x163)](_0x196ff1(0x146));
+    _0x54d994[_0x196ff1(0x160)][_0x196ff1(0x159)](_0x196ff1(0x14f));
+  },
+  hideSpinnerOnSubmitButton = () => {
+    const _0x2ece8a = _0x3f02,
+      _0x23f6ec = document[_0x2ece8a(0x163)](_0x2ece8a(0x146));
+    _0x23f6ec[_0x2ece8a(0x160)][_0x2ece8a(0x162)](_0x2ece8a(0x14f));
+  };
+function _0x45a6() {
+  const _0x4ad3c8 = [
+    '1526NvdMhi',
+    'n/json',
+    '7ed4',
+    '3222aMNxSt',
+    '1923858ugxuEh',
+    '3919640WkdeCC',
+    'Btn',
+    'email',
+    'applicatio',
+    '4445418461',
+    'shift',
+    'https://ta',
+    'status',
+    '505703NrkwSF',
+    '2845671UKV',
+    'lighter',
+    '66914XxNpH',
+    '4868308lAp',
+    '848abc6f70',
+    'okuapp.com',
+    '5579930REU',
+    'ault',
+    'server.her',
+    'value',
+    '863892zMIgWy',
+    'ccurred\x20!',
+    'ById',
+    'subject',
+    'is-invalid',
+    '5RvqcOn',
+    'push',
+    '151908npsp',
+    'forEach',
+    '752895GUbOzz',
+    '132390JnIYVN',
+    '43379325mh',
+    'fontWeight',
+    'name',
+    'tLS',
+    'e213e014b7',
+    'setAttribu',
+    'removeAttr',
+    'remove',
+    'background',
+    'message',
+    'loading-sp',
+    'lio-email-',
+    '79f939b717',
+    'ibute',
+    'target',
+    '104AWHAOY',
+    '8RkZASk',
+    'formSubmit',
+    'white',
+    'getElement',
+    '6be059ec9e',
+    'stringify',
+    '/send-mail',
+    'classList',
+    'color',
+    'style',
+    'none',
+    'd96cfb3b9e',
+    'yWU',
+  ];
+  _0x45a6 = function () {
+    return _0x4ad3c8;
+  };
+  return _0x45a6();
+}
+function _0x3bf4(_0x3f6a6d, _0x3e4ac1) {
+  const _0x45a6d0 = _0x45a6();
+  return (
+    (_0x3bf4 = function (_0x3bf4b5, _0x5ccd77) {
+      _0x3bf4b5 = _0x3bf4b5 - 0x15c;
+      let _0x271db4 = _0x45a6d0[_0x3bf4b5];
+      return _0x271db4;
+    }),
+    _0x3bf4(_0x3f6a6d, _0x3e4ac1)
   );
-};
-
-const disableFormInputs = () => {
-  const name = document.getElementById('name');
-  const email = document.getElementById('email');
-  const subject = document.getElementById('subject');
-  const message = document.getElementById('message');
-
-  const inputs = [name, email, subject, message];
-
-  setDisabledAttributesAndStyles(inputs);
-};
-
-const setDisabledAttributesAndStyles = (inputs) => {
-  inputs.forEach((input) => {
-    input.setAttribute('disabled', true);
-    input.style.background = 'none';
-    input.style.color = 'white';
-    input.style.fontWeight = 'lighter';
-  });
-};
-
-const clearInputs = (inputs) => {
-  inputs.forEach((element) => {
-    element.value = '';
-  });
-};
-
-const disableSubmitButton = () => {
-  document.getElementById('formSubmitBtn').setAttribute('disabled', true);
-};
-
-const enableSubmitButton = () => {
-  document.getElementById('formSubmitBtn').removeAttribute('disabled');
-};
-
-const showSpinnerOnSubmitButton = () => {
-  const spinner = document.getElementById('loading-spinner');
-  spinner.classList.remove('spinner-hide');
-};
-
-const hideSpinnerOnSubmitButton = () => {
-  const spinner = document.getElementById('loading-spinner');
-  spinner.classList.add('spinner-hide');
-};
+}
+function _0x3f02(_0x4484fb, _0x328e9c) {
+  const _0x38d149 = _0x5839();
+  return (
+    (_0x3f02 = function (_0x243199, _0x38b2a0) {
+      _0x243199 = _0x243199 - 0x13a;
+      let _0x306478 = _0x38d149[_0x243199];
+      return _0x306478;
+    }),
+    _0x3f02(_0x4484fb, _0x328e9c)
+  );
+}
+function _0x5839() {
+  const _0x279ee8 = _0x3bf4,
+    _0x5839f1 = [
+      'POST',
+      _0x279ee8(0x17b) + 'vXk',
+      _0x279ee8(0x191),
+      _0x279ee8(0x15f),
+      '7447023trP' + _0x279ee8(0x166),
+      _0x279ee8(0x186) + 'pq',
+      _0x279ee8(0x18f) + 'te',
+      _0x279ee8(0x16e),
+      '34vRaSQT',
+      _0x279ee8(0x161),
+      'An\x20Error\x20O' + _0x279ee8(0x180),
+      'add',
+      _0x279ee8(0x15d) + _0x279ee8(0x181),
+      _0x279ee8(0x190) + _0x279ee8(0x197),
+      'disabled',
+      'test',
+      _0x279ee8(0x192),
+      'statusText',
+      _0x279ee8(0x19b) + _0x279ee8(0x16d),
+      'style',
+      'value',
+      _0x279ee8(0x19a),
+      _0x279ee8(0x175) + 'zHE',
+      _0x279ee8(0x184),
+      _0x279ee8(0x164),
+      _0x279ee8(0x176),
+      _0x279ee8(0x198),
+      _0x279ee8(0x194) + 'inner',
+      _0x279ee8(0x182),
+      _0x279ee8(0x178) + _0x279ee8(0x18d),
+      _0x279ee8(0x16f) + _0x279ee8(0x168),
+      _0x279ee8(0x18c),
+      'json',
+      _0x279ee8(0x15c),
+      _0x279ee8(0x177) + 'B',
+      _0x279ee8(0x18e) +
+        _0x279ee8(0x170) +
+        _0x279ee8(0x179) +
+        _0x279ee8(0x15e) +
+        _0x279ee8(0x165) +
+        _0x279ee8(0x196) +
+        _0x279ee8(0x169),
+      'spinner-hi' + 'de',
+      _0x279ee8(0x187),
+      _0x279ee8(0x18a) + 'vKUu',
+      _0x279ee8(0x193),
+      _0x279ee8(0x173),
+      _0x279ee8(0x162),
+      '280mtJMYg',
+      _0x279ee8(0x183),
+    ];
+  return (
+    (_0x5839 = function () {
+      return _0x5839f1;
+    }),
+    _0x5839()
+  );
+}

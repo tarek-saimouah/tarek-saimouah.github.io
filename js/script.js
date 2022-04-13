@@ -1,63 +1,281 @@
+const _0x59ea42 = _0x394b,
+  _0x13a390 = _0x295f;
+(function (_0x778922, _0x7886fe) {
+  const _0x411c7f = _0x295f,
+    _0xe62ff0 = _0x394b,
+    _0x367dd5 = _0x778922();
+  while (!![]) {
+    try {
+      const _0x1d3123 =
+        -parseInt(_0xe62ff0(0x81, '\x43\x33\x61\x58')) / 0x1 +
+        -parseInt(_0xe62ff0(0xae, '\x6f\x64\x62\x47')) / 0x2 +
+        (parseInt(_0xe62ff0(0xac, '\x5b\x46\x25\x61')) / 0x3) *
+          (parseInt(_0x411c7f(0x92)) / 0x4) +
+        (-parseInt(_0xe62ff0(0xa2, '\x64\x51\x2a\x66')) / 0x5) *
+          (-parseInt(_0xe62ff0(0x8c, '\x71\x75\x32\x65')) / 0x6) +
+        -parseInt(_0xe62ff0(0x99, '\x71\x4f\x6e\x4a')) / 0x7 +
+        (-parseInt(_0xe62ff0(0xb0, '\x75\x47\x58\x50')) / 0x8) *
+          (parseInt(_0xe62ff0(0x89, '\x7a\x36\x24\x4a')) / 0x9) +
+        parseInt(_0x411c7f(0xa7)) / 0xa;
+      if (_0x1d3123 === _0x7886fe) break;
+      else _0x367dd5['push'](_0x367dd5['shift']());
+    } catch (_0x1aebe6) {
+      _0x367dd5['push'](_0x367dd5['shift']());
+    }
+  }
+})(_0x4144, 0x8c99f);
 import {
   animateLineUp,
   animateSectionContentUp,
-} from './scripts/animation.lineUp.js';
-import { setAnimationObserver } from './scripts/observer.js';
-import { submitForm } from './scripts/form.submit.js';
-
-// description text animation in intro section
-const description = document.getElementById('description');
-const descriptionTexts = [
-  'Full Stack JS Developer.',
-  'Android Developer',
-  'Software Engineer',
-];
-
-animateLineUp(description, descriptionTexts);
-
-// section content animation in skills section
-const skillsSectionContent =
-  document.getElementsByClassName('skills-section')[0];
-animateSectionContentUp(skillsSectionContent);
-
-/*
-// projects content animation in skills section
-const projectsSectionContent =
-  document.getElementsByClassName('projects-section')[0];
-animateSectionContentUp(projectsSectionContent);
-*/
-
-// skills progress-bar animation in skills section
-let target = '.progress-bar';
-setAnimationObserver(target);
-
-/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById('navbar').style.top = '0';
-  } else {
-    document.getElementById('navbar').style.top = '-75px';
-  }
-  prevScrollpos = currentScrollPos;
+} from '\x2e\x2f\x73\x63\x72\x69\x70\x74\x73\x2f\x61\x6e\x69\x6d\x61\x74\x69\x6f\x6e\x2e\x6c\x69\x6e\x65\x55\x70\x2e\x6a\x73';
+function _0x4144() {
+  const _0x36888c = [
+    '\x72\x6d\x6f\x63\x66\x53\x6b\x45',
+    '\x6d\x6f\x72\x65\x2d\x70\x72\x6f\x6a\x65\x63\x74\x73',
+    '\x61\x4d\x5a\x64\x55\x53\x6f\x76\x72\x47',
+    '\x72\x6d\x6f\x6d\x64\x53\x6b\x7a\x57\x34\x5a\x64\x53\x71',
+    '\x57\x35\x56\x64\x4f\x4e\x5a\x64\x4e\x53\x6b\x77\x57\x34\x30\x39\x63\x38\x6b\x73\x71\x32\x7a\x37\x65\x61\x74\x63\x47\x57',
+    '\x57\x50\x56\x64\x48\x53\x6b\x53\x57\x50\x6e\x7a\x57\x4f\x78\x64\x4a\x53\x6f\x56\x57\x52\x68\x63\x54\x30\x46\x63\x4b\x61',
+    '\x37\x39\x38\x32\x37\x38\x49\x71\x70\x54\x4c\x6f',
+    '\x6f\x6e\x73\x63\x72\x6f\x6c\x6c',
+    '\x6c\x53\x6f\x62\x74\x76\x56\x63\x55\x33\x47\x4c\x43\x6d\x6f\x62\x72\x53\x6b\x78\x57\x35\x65',
+    '\x64\x69\x73\x70\x6c\x61\x79',
+    '\x57\x51\x6a\x35\x79\x43\x6b\x62\x57\x36\x70\x64\x48\x64\x33\x63\x4a\x4e\x42\x64\x51\x4b\x58\x71\x57\x37\x56\x64\x51\x61',
+    '\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c',
+    '\x57\x37\x6a\x6a\x7a\x73\x57\x41\x57\x35\x37\x63\x56\x32\x54\x38',
+    '\x36\x34\x36\x33\x32\x32\x36\x46\x4a\x72\x6b\x68\x4b',
+    '\x39\x35\x32\x77\x62\x64\x62\x51\x42',
+    '\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x73\x42\x79\x43\x6c\x61\x73\x73\x4e\x61\x6d\x65',
+    '\x77\x53\x6f\x62\x57\x4f\x64\x63\x4f\x53\x6f\x68\x43\x6d\x6f\x4f\x45\x38\x6b\x42\x57\x50\x61\x71\x57\x37\x44\x56',
+    '\x6e\x61\x76\x62\x61\x72',
+    '\x6c\x61\x4a\x56\x62',
+    '\x46\x75\x6c\x6c\x20\x53\x74\x61\x63\x6b\x20\x4a\x53\x20\x44\x65\x76\x65\x6c\x6f\x70\x65\x72\x2e',
+    '\x57\x35\x6d\x75\x57\x34\x47\x49\x63\x43\x6f\x63\x57\x34\x70\x63\x4a\x61\x43\x63\x6a\x47',
+    '\x57\x35\x54\x78\x57\x50\x50\x49\x57\x36\x64\x63\x53\x61\x76\x70\x57\x36\x70\x64\x4d\x47\x72\x75\x57\x34\x69',
+    '\x6b\x78\x6d\x6e\x70',
+    '\x74\x6f\x70',
+    '\x2e\x70\x72\x6f\x67\x72\x65\x73\x73\x2d\x62\x61\x72',
+    '\x2d\x37\x35\x70\x78',
+    '\x57\x52\x57\x55\x62\x73\x61\x4b\x57\x51\x72\x61\x57\x35\x64\x64\x54\x5a\x52\x63\x4a\x62\x43\x61\x6d\x71',
+    '\x64\x65\x73\x63\x72\x69\x70\x74\x69\x6f\x6e',
+    '\x78\x71\x6d\x38\x57\x37\x57\x31\x43\x76\x52\x64\x50\x62\x6a\x31\x65\x6d\x6b\x79\x57\x36\x48\x47',
+    '\x56\x51\x59\x69\x55',
+    '\x57\x37\x6a\x2f\x57\x36\x6c\x63\x51\x75\x66\x2b\x57\x37\x74\x63\x55\x68\x34',
+    '\x41\x6e\x64\x72\x6f\x69\x64\x20\x44\x65\x76\x65\x6c\x6f\x70\x65\x72',
+    '\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64',
+    '\x73\x75\x62\x6d\x69\x74',
+    '\x73\x74\x79\x6c\x65',
+    '\x31\x36\x35\x30\x33\x33\x33\x30\x58\x59\x7a\x69\x4d\x55',
+    '\x6c\x6d\x6f\x65\x74\x76\x33\x63\x54\x33\x47\x79\x44\x6d\x6f\x73\x43\x53\x6b\x53\x57\x36\x6d',
+    '\x70\x61\x67\x65\x59\x4f\x66\x66\x73\x65\x74',
+    '\x57\x52\x34\x45\x57\x52\x57\x38\x57\x35\x68\x64\x4b\x38\x6f\x63\x44\x6d\x6b\x4d\x44\x53\x6f\x56\x57\x4f\x70\x63\x4b\x6d\x6b\x4b',
+    '\x57\x52\x33\x64\x4d\x65\x75\x36\x57\x34\x47',
+    '\x57\x50\x2f\x64\x52\x76\x72\x2b\x43\x48\x64\x64\x51\x73\x54\x57\x57\x34\x53',
+    '\x69\x61\x48\x30\x57\x35\x37\x63\x4f\x43\x6b\x34\x43\x74\x74\x63\x4c\x71',
+    '\x57\x51\x4f\x64\x57\x35\x4e\x63\x52\x73\x4a\x63\x52\x53\x6b\x70\x57\x34\x71\x70\x65\x43\x6b\x34\x68\x47',
+    '\x57\x52\x54\x4b\x7a\x64\x4b\x72\x57\x36\x74\x63\x47\x4b\x66\x79\x57\x37\x52\x64\x56\x75\x75',
+    '\x57\x37\x7a\x5a\x63\x6d\x6f\x77\x73\x4e\x4b\x31\x57\x52\x54\x52',
+    '\x73\x71\x30\x48\x57\x35\x75\x31\x7a\x58\x52\x64\x53\x48\x4c\x49\x6a\x53\x6b\x69\x57\x34\x35\x51',
+    '\x6f\x42\x5a\x6b\x51',
+    '\x57\x52\x57\x55\x62\x49\x43\x49\x57\x51\x75\x36\x57\x51\x42\x64\x52\x72\x56\x63\x50\x73\x71',
+    '\x32\x34\x38\x62\x51\x75\x67\x73\x6e',
+    '\x32\x33\x36\x37\x38\x31\x79\x4d\x69\x53\x57\x62',
+  ];
+  _0x4144 = function () {
+    return _0x36888c;
+  };
+  return _0x4144();
+}
+import { setAnimationObserver } from '\x2e\x2f\x73\x63\x72\x69\x70\x74\x73\x2f\x6f\x62\x73\x65\x72\x76\x65\x72\x2e\x6a\x73';
+import { submitForm } from '\x2e\x2f\x73\x63\x72\x69\x70\x74\x73\x2f\x66\x6f\x72\x6d\x2e\x73\x75\x62\x6d\x69\x74\x2e\x6a\x73';
+const _0x1f9026 = document[_0x13a390(0xa4)](_0x13a390(0x9f)),
+  _0x50d56c = [
+    _0x13a390(0x97),
+    _0x13a390(0xa3),
+    '\x53\x6f\x66\x74\x77\x61\x72\x65\x20\x45\x6e\x67\x69\x6e\x65\x65\x72',
+  ];
+function _0x394b(_0xc0149e, _0xdcdf2c) {
+  const _0x414405 = _0x4144();
+  return (
+    (_0x394b = function (_0x295fd1, _0x305cd7) {
+      _0x295fd1 = _0x295fd1 - 0x80;
+      let _0xfc4ed4 = _0x414405[_0x295fd1];
+      if (_0x394b['\x63\x6c\x5a\x69\x79\x76'] === undefined) {
+        var _0x5df805 = function (_0x175518) {
+          const _0x92e8d5 =
+            '\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6a\x6b\x6c\x6d\x6e\x6f\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4a\x4b\x4c\x4d\x4e\x4f\x50\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5a\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x2b\x2f\x3d';
+          let _0x1b43c0 = '',
+            _0x564948 = '';
+          for (
+            let _0x5decff = 0x0, _0x6c41a3, _0xfbd6b4, _0x39489b = 0x0;
+            (_0xfbd6b4 = _0x175518['\x63\x68\x61\x72\x41\x74'](_0x39489b++));
+            ~_0xfbd6b4 &&
+            ((_0x6c41a3 =
+              _0x5decff % 0x4 ? _0x6c41a3 * 0x40 + _0xfbd6b4 : _0xfbd6b4),
+            _0x5decff++ % 0x4)
+              ? (_0x1b43c0 += String[
+                  '\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65'
+                ](0xff & (_0x6c41a3 >> ((-0x2 * _0x5decff) & 0x6))))
+              : 0x0
+          ) {
+            _0xfbd6b4 = _0x92e8d5['\x69\x6e\x64\x65\x78\x4f\x66'](_0xfbd6b4);
+          }
+          for (
+            let _0x13fa9b = 0x0,
+              _0x515b9b = _0x1b43c0['\x6c\x65\x6e\x67\x74\x68'];
+            _0x13fa9b < _0x515b9b;
+            _0x13fa9b++
+          ) {
+            _0x564948 +=
+              '\x25' +
+              ('\x30\x30' +
+                _0x1b43c0['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](
+                  _0x13fa9b
+                )['\x74\x6f\x53\x74\x72\x69\x6e\x67'](0x10))[
+                '\x73\x6c\x69\x63\x65'
+              ](-0x2);
+          }
+          return decodeURIComponent(_0x564948);
+        };
+        const _0x394b42 = function (_0x40c05b, _0x56bfe9) {
+          let _0x5a0457 = [],
+            _0x311cea = 0x0,
+            _0x371355,
+            _0x311c7f = '';
+          _0x40c05b = _0x5df805(_0x40c05b);
+          let _0x47adac;
+          for (_0x47adac = 0x0; _0x47adac < 0x100; _0x47adac++) {
+            _0x5a0457[_0x47adac] = _0x47adac;
+          }
+          for (_0x47adac = 0x0; _0x47adac < 0x100; _0x47adac++) {
+            (_0x311cea =
+              (_0x311cea +
+                _0x5a0457[_0x47adac] +
+                _0x56bfe9['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](
+                  _0x47adac % _0x56bfe9['\x6c\x65\x6e\x67\x74\x68']
+                )) %
+              0x100),
+              (_0x371355 = _0x5a0457[_0x47adac]),
+              (_0x5a0457[_0x47adac] = _0x5a0457[_0x311cea]),
+              (_0x5a0457[_0x311cea] = _0x371355);
+          }
+          (_0x47adac = 0x0), (_0x311cea = 0x0);
+          for (
+            let _0x1598c0 = 0x0;
+            _0x1598c0 < _0x40c05b['\x6c\x65\x6e\x67\x74\x68'];
+            _0x1598c0++
+          ) {
+            (_0x47adac = (_0x47adac + 0x1) % 0x100),
+              (_0x311cea = (_0x311cea + _0x5a0457[_0x47adac]) % 0x100),
+              (_0x371355 = _0x5a0457[_0x47adac]),
+              (_0x5a0457[_0x47adac] = _0x5a0457[_0x311cea]),
+              (_0x5a0457[_0x311cea] = _0x371355),
+              (_0x311c7f += String[
+                '\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65'
+              ](
+                _0x40c05b['\x63\x68\x61\x72\x43\x6f\x64\x65\x41\x74'](
+                  _0x1598c0
+                ) ^
+                  _0x5a0457[
+                    (_0x5a0457[_0x47adac] + _0x5a0457[_0x311cea]) % 0x100
+                  ]
+              ));
+          }
+          return _0x311c7f;
+        };
+        (_0x394b['\x43\x44\x67\x42\x63\x6d'] = _0x394b42),
+          (_0xc0149e = arguments),
+          (_0x394b['\x63\x6c\x5a\x69\x79\x76'] = !![]);
+      }
+      const _0x1fa8e5 = _0x414405[0x0],
+        _0x2e2142 = _0x295fd1 + _0x1fa8e5,
+        _0x1951ce = _0xc0149e[_0x2e2142];
+      return (
+        !_0x1951ce
+          ? (_0x394b['\x48\x47\x6a\x54\x47\x6c'] === undefined &&
+              (_0x394b['\x48\x47\x6a\x54\x47\x6c'] = !![]),
+            (_0xfc4ed4 = _0x394b['\x43\x44\x67\x42\x63\x6d'](
+              _0xfc4ed4,
+              _0x305cd7
+            )),
+            (_0xc0149e[_0x2e2142] = _0xfc4ed4))
+          : (_0xfc4ed4 = _0x1951ce),
+        _0xfc4ed4
+      );
+    }),
+    _0x394b(_0xc0149e, _0xdcdf2c)
+  );
+}
+animateLineUp(_0x1f9026, _0x50d56c);
+const _0x2ceb75 = document[_0x13a390(0x93)](
+  _0x59ea42(0xb1, '\x23\x62\x24\x28')
+)[0x0];
+animateSectionContentUp(_0x2ceb75);
+let _0x2f2a50 = _0x13a390(0x9c);
+setAnimationObserver(_0x2f2a50);
+function _0x295f(_0xc0149e, _0xdcdf2c) {
+  const _0x414405 = _0x4144();
+  return (
+    (_0x295f = function (_0x295fd1, _0x305cd7) {
+      _0x295fd1 = _0x295fd1 - 0x80;
+      let _0xfc4ed4 = _0x414405[_0x295fd1];
+      return _0xfc4ed4;
+    }),
+    _0x295f(_0xc0149e, _0xdcdf2c)
+  );
+}
+let _0x1f542d = window[_0x59ea42(0x98, '\x59\x49\x4d\x33')];
+window[_0x13a390(0x8b)] = function () {
+  const _0x2bf37d = _0x13a390,
+    _0x5c29ce = _0x59ea42,
+    _0x3105b4 = {
+      '\x6c\x61\x4a\x56\x62': function (_0x5d16b6, _0xeca71) {
+        return _0x5d16b6 > _0xeca71;
+      },
+      '\x51\x6f\x6f\x69\x49': _0x5c29ce(0x87, '\x5b\x6b\x79\x4a'),
+      '\x6b\x78\x6d\x6e\x70': _0x2bf37d(0x9d),
+    };
+  let _0x3f5e57 = window[_0x2bf37d(0xa9)];
+  _0x3105b4[_0x2bf37d(0x96)](_0x1f542d, _0x3f5e57)
+    ? (document[_0x5c29ce(0xa0, '\x23\x62\x24\x28')](
+        _0x3105b4['\x51\x6f\x6f\x69\x49']
+      )[_0x5c29ce(0x86, '\x29\x68\x38\x48')]['\x74\x6f\x70'] = '\x30')
+    : (document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64'](
+        _0x2bf37d(0x95)
+      )['\x73\x74\x79\x6c\x65'][_0x2bf37d(0x9b)] = _0x3105b4[_0x2bf37d(0x9a)]),
+    (_0x1f542d = _0x3f5e57);
 };
-
-// show more button on click listener to hide and show more projects section
-const btnShowMore = document.getElementById('show-more-btn');
-const moreProjectsSection = document.getElementsByClassName('more-projects')[0];
-
-btnShowMore.onclick = () => {
-  btnShowMore.style.display = 'none';
-  animateSectionContentUp(moreProjectsSection);
-  moreProjectsSection.style.display = 'block';
+const _0x14f6ec = document[_0x59ea42(0xaa, '\x35\x52\x6c\x32')](
+    _0x59ea42(0x94, '\x6e\x34\x4e\x43')
+  ),
+  _0x712bdc = document[_0x13a390(0x93)](_0x13a390(0x85))[0x0];
+_0x14f6ec['\x6f\x6e\x63\x6c\x69\x63\x6b'] = () => {
+  const _0xbf487b = _0x13a390,
+    _0x420ef1 = _0x59ea42,
+    _0x3dbc33 = {
+      '\x6f\x42\x5a\x6b\x51': _0x420ef1(0x84, '\x5b\x6b\x79\x4a'),
+      '\x56\x51\x59\x69\x55': function (_0x54ce1c, _0x36658d) {
+        return _0x54ce1c(_0x36658d);
+      },
+      '\x67\x4d\x4b\x52\x6c': '\x62\x6c\x6f\x63\x6b',
+    };
+  (_0x14f6ec[_0xbf487b(0xa6)][_0xbf487b(0x8d)] = _0x3dbc33[_0xbf487b(0x80)]),
+    _0x3dbc33[_0xbf487b(0xa1)](animateSectionContentUp, _0x712bdc),
+    (_0x712bdc[_0x420ef1(0xab, '\x61\x61\x46\x42')][_0xbf487b(0x8d)] =
+      _0x3dbc33['\x67\x4d\x4b\x52\x6c']);
 };
-
-// Footer copyright text
-const copyright = document.getElementById('copyright');
-copyright.innerHTML =
-  `© ${new Date().getFullYear()} Copyright: ` + copyright.innerHTML;
-
-// Contact Me Form submit
-const contactMeForm = document.getElementById('contact-me-form');
-contactMeForm.addEventListener('submit', submitForm);
+const _0x1668fe = document[_0x59ea42(0x8e, '\x71\x40\x40\x61')](
+  _0x59ea42(0xad, '\x74\x39\x5b\x25')
+);
+_0x1668fe[_0x13a390(0x8f)] =
+  '\u00a9\x20' +
+  new Date()['\x67\x65\x74\x46\x75\x6c\x6c\x59\x65\x61\x72']() +
+  _0x59ea42(0xaf, '\x57\x26\x79\x21') +
+  _0x1668fe[_0x59ea42(0x90, '\x57\x26\x79\x21')];
+const _0x553ece = document[_0x13a390(0xa4)](
+  _0x59ea42(0x88, '\x52\x28\x4b\x5d')
+);
+_0x553ece['\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69\x73\x74\x65\x6e\x65\x72'](
+  _0x13a390(0xa5),
+  submitForm
+);
