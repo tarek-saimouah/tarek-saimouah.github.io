@@ -79,20 +79,23 @@ export async function submitForm(event) {
 const sendEmailRequest = (payload) => {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch('http://localhost:5000/send-mail', {
-        // Adding method type
-        method: 'POST',
+      const response = await fetch(
+        'https://tarek-portfolio-email-server.herokuapp.com/send-mail',
+        {
+          // Adding method type
+          method: 'POST',
 
-        // Adding body or contents to send
-        body: JSON.stringify(payload),
+          // Adding body or contents to send
+          body: JSON.stringify(payload),
 
-        // Adding headers to the request
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization-Key':
-            'e213e014b74445418461848abc6f706be059ec9ed96cfb3b9e79f939b7177ed4',
-        },
-      });
+          // Adding headers to the request
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization-Key':
+              'e213e014b74445418461848abc6f706be059ec9ed96cfb3b9e79f939b7177ed4',
+          },
+        }
+      );
 
       if (response.status === 429) {
         resolve({ status: response.status, message: response.statusText });

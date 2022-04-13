@@ -94,7 +94,7 @@
               <a class="nav-link" href="#projects-section">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact-section">Contact</a>
+              <a class="nav-link" href="#contact-section">Contact Me</a>
             </li>
           </ul>
           <!-- Left links -->
@@ -219,7 +219,7 @@
           <!-- Intro Image -->
           <div class="col-sm-12 col-md-4 col-lg-6">
             <img
-              src="img/my-img.png"
+              src="img/profile-pic.png"
               class="img-thumbnail photo my-3"
               alt="Personal image"
             />
@@ -1625,7 +1625,7 @@
                   data-mdb-ripple-color="light"
                 >
                   <img
-                    style="height: 340px"
+                    style="height: 340px; object-fit: contain"
                     src="img/mysql-java-logo.png"
                     class="img-fluid img-thumbnail card-img"
                   />
@@ -1911,6 +1911,103 @@
               </div>
             </div>
             <!-- /Notes App scrollable modal -->
+
+            <!-- Project News App -->
+            <div class="col-sm-12 col-md-6 col-lg-4 p-5">
+              <div class="card mx-auto">
+                <div
+                  class="bg-image hover-overlay ripple card-img-wrapper"
+                  data-mdb-ripple-color="light"
+                >
+                  <img
+                    style="width: 100%"
+                    src="img/news-app-logo.png"
+                    class="img-fluid img-thumbnail card-img"
+                  />
+                  <a data-mdb-toggle="modal" href="#news-modal" role="button">
+                    <!-- Mask -->
+                    <div
+                      class="mask"
+                      style="
+                        background: linear-gradient(
+                          to bottom,
+                          hsla(0, 0%, 0%, 0),
+                          hsla(263, 80%, 20%, 0.5)
+                        );
+                      "
+                    >
+                      <div
+                        class="bottom-0 d-flex align-items-end h-100 text-center justify-content-center"
+                      >
+                        <div>
+                          <h5 class="fw-bold text-white mb-4">News App</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">News App</h5>
+                  <h6 class="card-subtitle mb-2 technology">
+                    <span class="mx-2">Andorid</span>
+                    <span class="mx-2">kotlin</span>
+                    <span class="mx-2">Retrofit</span>
+                    <span class="mx-2">MVVM</span>
+                  </h6>
+                  <hr style="width: 80%" class="mx-auto" />
+                  <p class="card-text">
+                    Android application for keeping up with global news.
+                  </p>
+                  <a
+                    class="btn btn-danger d-block mx-5"
+                    data-mdb-toggle="modal"
+                    href="#news-modal"
+                    role="button"
+                    ><i class="fas fa-info-circle fa-lg me-2"></i> Details</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- News App scrollable modal -->
+            <div id="news-modal" class="modal mx-auto" tabindex="-1">
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">News App Details</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-mdb-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <h6 class="modal-body-title">Technical Information:</h6>
+                    <ul>
+                      <li>
+                        Built with <span class="technology">Kotlin</span>.
+                      </li>
+                      <li>
+                        fetch api using
+                        <span class="technology">Retrofit 2</span>.
+                      </li>
+                      <li>
+                        Api used is
+                        <span class="technology">newsapi.org</span> free api.
+                      </li>
+                      <li>
+                        <span class="technology">MVVM</span> architicture
+                        pattern.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /News App scrollable modal -->
           </div>
           <!-- /Projects row -->
         </div>

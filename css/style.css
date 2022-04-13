@@ -492,6 +492,11 @@ body {
 
 .card {
   color: var(--bg-color-primary);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .technology {
