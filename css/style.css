@@ -186,7 +186,7 @@ body {
 
 /* Kotlin progress */
 #progress-kotlin {
-  width: 75%;
+  width: 80%;
   background-color: coral;
 }
 .progress-animation-kotlin {
@@ -197,7 +197,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 75%;
+    width: 80%;
   }
 }
 
@@ -237,7 +237,7 @@ body {
 
 /* SQL progress */
 #progress-sql {
-  width: 80%;
+  width: 85%;
   background-color: tomato;
 }
 
@@ -249,13 +249,13 @@ body {
     width: 0%;
   }
   100% {
-    width: 80%;
+    width: 85%;
   }
 }
 
 /* NoSQL progress */
 #progress-nosql {
-  width: 85%;
+  width: 90%;
   background-color: seagreen;
 }
 
@@ -267,7 +267,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -308,7 +308,7 @@ body {
 
 /* CSS3 progress */
 #progress-css {
-  width: 70%;
+  width: 75%;
 }
 
 .progress-animation-css {
@@ -319,7 +319,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 70%;
+    width: 75%;
   }
 }
 
@@ -342,7 +342,7 @@ body {
 
 /* Node Js progress */
 #progress-node {
-  width: 80%;
+  width: 95%;
   background-color: #68a063;
 }
 
@@ -354,13 +354,13 @@ body {
     width: 0%;
   }
   100% {
-    width: 80%;
+    width: 95%;
   }
 }
 
 /* React Js progress */
 #progress-react {
-  width: 80%;
+  width: 85%;
 }
 
 .progress-animation-react {
@@ -371,7 +371,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 80%;
+    width: 85%;
   }
 }
 
@@ -413,7 +413,7 @@ body {
 
 /* Git progress */
 #progress-git {
-  width: 80%;
+  width: 85%;
   background-color: #f34f29;
 }
 
@@ -425,13 +425,13 @@ body {
     width: 0%;
   }
   100% {
-    width: 80%;
+    width: 85%;
   }
 }
 
 /* Linux progress */
 #progress-linux {
-  width: 80%;
+  width: 85%;
 }
 
 .progress-animation-linux {
@@ -442,7 +442,7 @@ body {
     width: 0%;
   }
   100% {
-    width: 80%;
+    width: 85%;
   }
 }
 
